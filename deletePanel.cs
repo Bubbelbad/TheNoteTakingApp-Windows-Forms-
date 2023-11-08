@@ -12,9 +12,15 @@ namespace TheNoteTakingApp__Windows_Forms_
 {
     public partial class deletePanel : UserControl
     {
+        NoteManager NoteManager = null;
         public deletePanel()
         {
             InitializeComponent();
+        }
+
+        public void SetManager(NoteManager noteManager)
+        {
+            this.NoteManager = noteManager;
         }
     }
 }

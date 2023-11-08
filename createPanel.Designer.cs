@@ -28,98 +28,121 @@
         /// </summary>
         private void InitializeComponent()
         {
-            nameLabel = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
-            button1 = new Button();
-            textBox2 = new TextBox();
-            checkBox1 = new CheckBox();
+            authorLabel = new Label();
+            categoryLabel = new Label();
+            messageLabel = new Label();
+            authorTextBox = new TextBox();
+            categoryComboBox = new ComboBox();
+            saveCreateButton = new Button();
+            messageTextBox = new TextBox();
+            secretCheckBox = new CheckBox();
+            titleLabel = new Label();
+            titleTextBox = new TextBox();
             SuspendLayout();
             // 
-            // nameLabel
+            // authorLabel
             // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new Point(16, 25);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(42, 15);
-            nameLabel.TabIndex = 1;
-            nameLabel.Text = "Name:";
+            authorLabel.AutoSize = true;
+            authorLabel.Location = new Point(16, 25);
+            authorLabel.Name = "authorLabel";
+            authorLabel.Size = new Size(47, 15);
+            authorLabel.TabIndex = 1;
+            authorLabel.Text = "Author:";
             // 
-            // label3
+            // categoryLabel
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(16, 54);
-            label3.Name = "label3";
-            label3.Size = new Size(58, 15);
-            label3.TabIndex = 2;
-            label3.Text = "Category:";
+            categoryLabel.AutoSize = true;
+            categoryLabel.Location = new Point(16, 80);
+            categoryLabel.Name = "categoryLabel";
+            categoryLabel.Size = new Size(58, 15);
+            categoryLabel.TabIndex = 2;
+            categoryLabel.Text = "Category:";
             // 
-            // label4
+            // messageLabel
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(244, 25);
-            label4.Name = "label4";
-            label4.Size = new Size(56, 15);
-            label4.TabIndex = 3;
-            label4.Text = "Message:";
+            messageLabel.AutoSize = true;
+            messageLabel.Location = new Point(244, 25);
+            messageLabel.Name = "messageLabel";
+            messageLabel.Size = new Size(56, 15);
+            messageLabel.TabIndex = 3;
+            messageLabel.Text = "Message:";
             // 
-            // textBox1
+            // authorTextBox
             // 
-            textBox1.Location = new Point(81, 22);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(120, 23);
-            textBox1.TabIndex = 4;
+            authorTextBox.Location = new Point(81, 22);
+            authorTextBox.Name = "authorTextBox";
+            authorTextBox.Size = new Size(120, 23);
+            authorTextBox.TabIndex = 4;
+            authorTextBox.TextChanged += authorTextBox_TextChanged;
             // 
-            // comboBox1
+            // categoryComboBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Poem", "Complaint", "Bold Statement", "Kväde", "Secret" });
-            comboBox1.Location = new Point(80, 51);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 5;
+            categoryComboBox.FormattingEnabled = true;
+            categoryComboBox.Items.AddRange(new object[] { "Poem", "Complaint", "Bold Statement", "Kväde", "Secret" });
+            categoryComboBox.Location = new Point(79, 77);
+            categoryComboBox.Name = "categoryComboBox";
+            categoryComboBox.Size = new Size(121, 23);
+            categoryComboBox.TabIndex = 5;
             // 
-            // button1
+            // saveCreateButton
             // 
-            button1.Location = new Point(317, 302);
-            button1.Name = "button1";
-            button1.Size = new Size(53, 23);
-            button1.TabIndex = 6;
-            button1.Text = "Save";
-            button1.UseVisualStyleBackColor = true;
+            saveCreateButton.Location = new Point(317, 302);
+            saveCreateButton.Name = "saveCreateButton";
+            saveCreateButton.Size = new Size(53, 23);
+            saveCreateButton.TabIndex = 6;
+            saveCreateButton.Text = "Save";
+            saveCreateButton.UseVisualStyleBackColor = true;
+            saveCreateButton.Click += button1_Click;
             // 
-            // textBox2
+            // messageTextBox
             // 
-            textBox2.Location = new Point(317, 25);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(312, 270);
-            textBox2.TabIndex = 7;
+            messageTextBox.Location = new Point(317, 25);
+            messageTextBox.Multiline = true;
+            messageTextBox.Name = "messageTextBox";
+            messageTextBox.Size = new Size(312, 270);
+            messageTextBox.TabIndex = 7;
             // 
-            // checkBox1
+            // secretCheckBox
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(80, 80);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(63, 19);
-            checkBox1.TabIndex = 8;
-            checkBox1.Text = "Secret?";
-            checkBox1.UseVisualStyleBackColor = true;
+            secretCheckBox.AutoSize = true;
+            secretCheckBox.Location = new Point(80, 110);
+            secretCheckBox.Name = "secretCheckBox";
+            secretCheckBox.Size = new Size(63, 19);
+            secretCheckBox.TabIndex = 8;
+            secretCheckBox.Text = "Secret?";
+            secretCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // titleLabel
+            // 
+            titleLabel.AutoSize = true;
+            titleLabel.Enabled = false;
+            titleLabel.Location = new Point(16, 51);
+            titleLabel.Name = "titleLabel";
+            titleLabel.Size = new Size(35, 15);
+            titleLabel.TabIndex = 9;
+            titleLabel.Text = "Title: ";
+            // 
+            // titleTextBox
+            // 
+            titleTextBox.Location = new Point(80, 48);
+            titleTextBox.Name = "titleTextBox";
+            titleTextBox.Size = new Size(120, 23);
+            titleTextBox.TabIndex = 10;
             // 
             // createPanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(checkBox1);
-            Controls.Add(textBox2);
-            Controls.Add(button1);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox1);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(nameLabel);
+            Controls.Add(titleTextBox);
+            Controls.Add(titleLabel);
+            Controls.Add(secretCheckBox);
+            Controls.Add(messageTextBox);
+            Controls.Add(saveCreateButton);
+            Controls.Add(categoryComboBox);
+            Controls.Add(authorTextBox);
+            Controls.Add(messageLabel);
+            Controls.Add(categoryLabel);
+            Controls.Add(authorLabel);
             Name = "createPanel";
             Size = new Size(656, 344);
             ResumeLayout(false);
@@ -127,13 +150,15 @@
         }
 
         #endregion
-        private Label nameLabel;
-        private Label label3;
-        private Label label4;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
-        private Button button1;
-        private TextBox textBox2;
-        private CheckBox checkBox1;
+        private Label authorLabel;
+        private Label categoryLabel;
+        private Label messageLabel;
+        private TextBox authorTextBox;
+        private ComboBox categoryComboBox;
+        private Button saveCreateButton;
+        private TextBox messageTextBox;
+        private CheckBox secretCheckBox;
+        private Label titleLabel;
+        private TextBox titleTextBox;
     }
 }

@@ -2,7 +2,7 @@ namespace TheNoteTakingApp__Windows_Forms_
 {
     public partial class MainMenu : Form
     {
-        
+
 
         public MainMenu()
         {
@@ -12,13 +12,17 @@ namespace TheNoteTakingApp__Windows_Forms_
         private void Form1_Load(object sender, EventArgs e)
         {
             NoteManager noteManager = new NoteManager();
-            noteManager.CreateNote("Victor", "Poem", "All roses are red", true);
+            noteManager.CreateNote("Victor", "Roses", "Poem", "All roses are red, almost.", true);
+            toolStripStatusLabel1.Text = "Ready";
             homePanel1.Visible = true;
             deletePanel1.Visible = false;
             createPanel1.Visible = false;
             viewPanel1.Visible = false;
             createPanel1.SetManager(noteManager);
             viewPanel1.SetManager(noteManager);
+            deletePanel1.SetManager(noteManager);
+            createPanel1.ImportToolStrip(toolStripStatusLabel1);
+            
         }
 
 
@@ -37,7 +41,7 @@ namespace TheNoteTakingApp__Windows_Forms_
             deletePanel1.Visible = false;
             createPanel1.Visible = false;
             viewPanel1.Visible = true;
-            
+
         }
 
         private void createBtn_Click(object sender, EventArgs e)

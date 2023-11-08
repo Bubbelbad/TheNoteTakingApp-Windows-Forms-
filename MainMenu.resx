@@ -124,10 +124,10 @@
     <value>132, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="iconPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACkAAAAtCAYAAAAz8ULgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAcKSURBVFhH7Zh5
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAcKSURBVFhH7Zh5
         cBNlGMbrfc84Hv94jtpNYhEUUMG7o+KAF0OhypVsktJKm+ymSUgtPUwpbdpCaSkghd4XjAcyHogFdSpH
         KSgVqEVBW9piHblE8aBaAo/vt9mkpKxgU0KdkWfmmTTvft3vl/e73t2Q8xoIOUOcF064xXqFECpcRl8v
         8ESVFRkWeWnM8JgrI0MiL5JDwZdWY7pex5lm8CphmU5lXspz5ufkS711Aa+Ke0rHmRdRmzd5zpRsCBVu
