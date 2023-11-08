@@ -17,19 +17,32 @@ namespace TheNoteTakingApp__Windows_Forms_
         public viewPanel()
         {
             InitializeComponent();
+
         }
 
         public void SetManager(NoteManager noteManager)
         {
             this.NoteManager = noteManager;
+            foreach (Note note in NoteManager.listOfNotes)
+            {
+                availableListBox.Items.Add($"{note.Category}: {note.Title}");
+            }
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Note note in NoteManager.listOfNotes)
+            int index = availableListBox.SelectedIndex;
+            if (index > -1)
             {
-                availableListBox.Items.Add($"Autor: {note.Title} Title: {note.Title}");
+                Note note = NoteManager.listOfNotes[index];
+
+                title2.Text = note.Title;
+                author2.Text = note.Author;
+                category2.Text = note.Category;
+                messageTextBox.Text = note.Message;
             }
         }
+
+
 
     }
 }

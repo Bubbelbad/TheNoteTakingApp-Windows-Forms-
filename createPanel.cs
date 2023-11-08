@@ -37,15 +37,18 @@ namespace TheNoteTakingApp__Windows_Forms_
             this.ToolStripStatusLabel1 = toolStripStatusLabel1;
         }
 
-        private void authorTextBox_TextChanged(object sender, EventArgs e)
-        {
-            string author = authorTextBox.Text;
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string author = authorTextBox.Text;
+            string title = titleTextBox.Text;
+            string category = categoryComboBox.Text;
+            string message = messageTextBox.Text;
+            bool secret = secretCheckBox.Checked;
+
             NoteManager.CreateNote(author, title, category, message, secret);
             ToolStripStatusLabel1.Text = "Success!";
+
             authorTextBox.Clear();
             titleTextBox.Clear();
             categoryLabel = default;
