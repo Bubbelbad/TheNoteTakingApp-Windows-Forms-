@@ -9,5 +9,4 @@ Some of the messages will be pre-written examples (for first time use) and some 
 - There needs to be a list of objects that you can remove and add
 - These objects should be saved as CSV, and then again uploaded and used in the program.
 
-  
-
+![Preview](https://github.com/Bubbelbad/TheNoteTakingApp-Windows-Forms-/blob/master/Screenshot%202023-11-08%20210705.png?raw=true)
