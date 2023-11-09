@@ -38,6 +38,8 @@
             category2 = new Label();
             label6 = new Label();
             messageTextBox = new TextBox();
+            refreshBtn = new Button();
+            deleteBtn = new Button();
             SuspendLayout();
             // 
             // availableLabel
@@ -56,14 +58,14 @@
             availableListBox.ItemHeight = 15;
             availableListBox.Location = new Point(22, 42);
             availableListBox.Name = "availableListBox";
-            availableListBox.Size = new Size(146, 289);
+            availableListBox.Size = new Size(146, 244);
             availableListBox.TabIndex = 1;
             availableListBox.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // titleLabel2
             // 
             titleLabel2.AutoSize = true;
-            titleLabel2.Location = new Point(186, 63);
+            titleLabel2.Location = new Point(174, 62);
             titleLabel2.Name = "titleLabel2";
             titleLabel2.Size = new Size(35, 15);
             titleLabel2.TabIndex = 2;
@@ -72,7 +74,7 @@
             // authorLabel2
             // 
             authorLabel2.AutoSize = true;
-            authorLabel2.Location = new Point(186, 42);
+            authorLabel2.Location = new Point(174, 41);
             authorLabel2.Name = "authorLabel2";
             authorLabel2.Size = new Size(47, 15);
             authorLabel2.TabIndex = 3;
@@ -81,7 +83,7 @@
             // title2
             // 
             title2.AutoSize = true;
-            title2.Location = new Point(249, 63);
+            title2.Location = new Point(237, 62);
             title2.Name = "title2";
             title2.Size = new Size(0, 15);
             title2.TabIndex = 4;
@@ -89,7 +91,7 @@
             // author2
             // 
             author2.AutoSize = true;
-            author2.Location = new Point(249, 42);
+            author2.Location = new Point(237, 41);
             author2.Name = "author2";
             author2.Size = new Size(0, 15);
             author2.TabIndex = 5;
@@ -97,7 +99,7 @@
             // categoryLabel2
             // 
             categoryLabel2.AutoSize = true;
-            categoryLabel2.Location = new Point(186, 83);
+            categoryLabel2.Location = new Point(174, 82);
             categoryLabel2.Name = "categoryLabel2";
             categoryLabel2.Size = new Size(61, 15);
             categoryLabel2.TabIndex = 6;
@@ -106,7 +108,7 @@
             // category2
             // 
             category2.AutoSize = true;
-            category2.Location = new Point(249, 83);
+            category2.Location = new Point(237, 82);
             category2.Name = "category2";
             category2.Size = new Size(0, 15);
             category2.TabIndex = 7;
@@ -114,7 +116,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(349, 24);
+            label6.Location = new Point(330, 24);
             label6.Name = "label6";
             label6.Size = new Size(56, 15);
             label6.TabIndex = 8;
@@ -122,16 +124,37 @@
             // 
             // messageTextBox
             // 
-            messageTextBox.Location = new Point(349, 42);
+            messageTextBox.Location = new Point(330, 42);
             messageTextBox.Multiline = true;
             messageTextBox.Name = "messageTextBox";
-            messageTextBox.Size = new Size(304, 289);
+            messageTextBox.Size = new Size(323, 289);
             messageTextBox.TabIndex = 9;
+            // 
+            // refreshBtn
+            // 
+            refreshBtn.Location = new Point(22, 292);
+            refreshBtn.Name = "refreshBtn";
+            refreshBtn.Size = new Size(65, 23);
+            refreshBtn.TabIndex = 10;
+            refreshBtn.Text = "Refresh";
+            refreshBtn.UseVisualStyleBackColor = true;
+            refreshBtn.Click += refreshBtn_Click;
+            // 
+            // deleteBtn
+            // 
+            deleteBtn.Location = new Point(93, 292);
+            deleteBtn.Name = "deleteBtn";
+            deleteBtn.Size = new Size(75, 23);
+            deleteBtn.TabIndex = 11;
+            deleteBtn.Text = "Delete";
+            deleteBtn.UseVisualStyleBackColor = true;
             // 
             // viewPanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(deleteBtn);
+            Controls.Add(refreshBtn);
             Controls.Add(messageTextBox);
             Controls.Add(label6);
             Controls.Add(category2);
@@ -160,5 +183,7 @@
         private Label category2;
         private Label label6;
         private TextBox messageTextBox;
+        private Button refreshBtn;
+        private Button deleteBtn;
     }
 }

@@ -13,7 +13,12 @@ namespace TheNoteTakingApp__Windows_Forms_
         private void Form1_Load(object sender, EventArgs e)
         {
             NoteManager noteManager = new NoteManager();
-            noteManager.CreateNote("Victor", "Roses", "Poem", "All roses are red, almost.", true);
+            noteManager.CreateNote("Ernest", "Carthusians", "Poem", "We fling up flowers and laugh, we laugh across the wine;\r\n   " +
+                "With wine we dull our souls and careful strains of art;\r\nOur cups are polished skulls round which the roses twine:\r\n   " +
+                "None dares to look at Death who leers and lurks apart.\r\n \r\nMove on, white company, whom that has not sufficed!\r\n   " +
+                "Our viols cease, our wine is death, our roses fail:\r\nPray for our heedlessness, O dwellers with the Christ!\r\n   " +
+                "Though the world fall apart, surely ye shall prevail. ", true);
+
             noteManager.CreateNote("Dan", "Diversehandlaren", "Kväde", "Stor och stursk har du blivit bakom din disk, den höga,\r\n" +
                 "ingenting mer än salt och ovett har du åt kunden mer,\r\noch att krusa dig och din dräng lönar numera föga,\r\n" +
                 "bara allt värre blir du, mer surt du på människan ser.\r\n\r\nSäg, var kom du ifrån, Noaksson med humöret,\r\n" +
@@ -22,6 +27,7 @@ namespace TheNoteTakingApp__Windows_Forms_
                 "Tänker du låta pojken studera till doktor eller till präst?\r\n" +
                 "Sparkad i ändan av kristidsturen tror du väl snart för fanken " +
                 "att en monark du kan bli på salt och surkål och jäst.\r\n", true);
+
             toolStripStatusLabel1.Text = "Ready";
             createPanel1.ImportToolStrip(toolStripStatusLabel1);
             homePanel1.Visible = true;
@@ -42,7 +48,6 @@ namespace TheNoteTakingApp__Windows_Forms_
             deletePanel1.Visible = false;
             createPanel1.Visible = false;
             viewPanel1.Visible = false;
-
         }
 
         private void viewBtn_Click(object sender, EventArgs e)
@@ -51,7 +56,7 @@ namespace TheNoteTakingApp__Windows_Forms_
             deletePanel1.Visible = false;
             createPanel1.Visible = false;
             viewPanel1.Visible = true;
-
+            
         }
 
         private void createBtn_Click(object sender, EventArgs e)

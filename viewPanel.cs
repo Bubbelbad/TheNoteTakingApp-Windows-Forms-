@@ -20,14 +20,18 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         }
 
+        //This function imports the listOfNotes to the availableListBox.Items, but only once!
+        //How do I call this again to update newly created notes?
         public void SetManager(NoteManager noteManager)
         {
             this.NoteManager = noteManager;
             foreach (Note note in NoteManager.listOfNotes)
             {
-                availableListBox.Items.Add($"{note.Category}: {note.Title}");
+                availableListBox.Items.Add($"{note.Title}");
             }
         }
+
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = availableListBox.SelectedIndex;
@@ -42,7 +46,26 @@ namespace TheNoteTakingApp__Windows_Forms_
             }
         }
 
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            int index = 0;
+            foreach (Note note in NoteManager.listOfNotes)
+            {
+                try
+                {
+                    if (note.Title == availableListBox.Items[index].ToString())
+                    {
+                        index++;
+                    }
 
+                }
+                catch
+                {
+                    availableListBox.Items.Add($"{note.Title}");
+                    index++;
+                }
 
+            }
+        }
     }
 }
