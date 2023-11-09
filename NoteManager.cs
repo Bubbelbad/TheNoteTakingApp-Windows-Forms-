@@ -16,5 +16,6 @@ namespace TheNoteTakingApp__Windows_Forms_
         {
             listOfNotes.Add(new Note(author, title, category, message, secret));
         }
+
     }
 }

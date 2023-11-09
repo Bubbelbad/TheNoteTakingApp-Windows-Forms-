@@ -20,8 +20,8 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         }
 
-        //This function imports the listOfNotes to the availableListBox.Items, but only once!
-        //How do I call this again to update newly created notes?
+
+        //Importing the same Manager as every panel has to edit the notes
         public void SetManager(NoteManager noteManager)
         {
             this.NoteManager = noteManager;
@@ -30,6 +30,7 @@ namespace TheNoteTakingApp__Windows_Forms_
                 availableListBox.Items.Add($"{note.Title}");
             }
         }
+
 
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -46,6 +47,8 @@ namespace TheNoteTakingApp__Windows_Forms_
             }
         }
 
+
+
         private void refreshBtn_Click(object sender, EventArgs e)
         {
             int index = 0;
@@ -57,14 +60,12 @@ namespace TheNoteTakingApp__Windows_Forms_
                     {
                         index++;
                     }
-
                 }
                 catch
                 {
                     availableListBox.Items.Add($"{note.Title}");
                     index++;
                 }
-
             }
         }
     }
