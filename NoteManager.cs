@@ -30,15 +30,20 @@ namespace TheNoteTakingApp__Windows_Forms_
             streamWriter.Close();
         }
 
-        public void SaveOne(Note note)
+
+        //Save the most recent created note
+        public void SaveRecentNote()
         {
             StreamWriter streamWriter = new StreamWriter(path);
-
-
+            int index = listOfNotes.Count - 1;
+            streamWriter.WriteLine(listOfNotes[index].GetCSV());
+            streamWriter.Close();
         }
 
+
+
         //To load all notes from csv
-        private void Load()
+        public void Load()
         {
             listOfNotes.Clear();
             using (StreamReader reader = new StreamReader(path))
@@ -55,6 +60,9 @@ namespace TheNoteTakingApp__Windows_Forms_
                         string message = strings[3];
                         bool secret = Convert.ToBoolean(strings[4]);
 
+                        Note note = new Note(author, title, category, message, secret);
+                        listOfNotes.Add(note);
+
                         line = reader.ReadLine();
                     }
                 }
@@ -62,7 +70,6 @@ namespace TheNoteTakingApp__Windows_Forms_
                 {
                     Console.WriteLine(ex.Message);
                 }
-                
             }
         }
     }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TheNoteTakingApp__Windows_Forms_
 {
-    public partial class createPanel : UserControl
+    public partial class CreatePanel : UserControl
     {
         NoteManager NoteManager = null;
         ToolStripStatusLabel ToolStripStatusLabel1 = null;
@@ -21,7 +21,7 @@ namespace TheNoteTakingApp__Windows_Forms_
         string message;
         bool secret;
 
-        public createPanel()
+        public CreatePanel()
         {
             InitializeComponent();
 
@@ -37,7 +37,7 @@ namespace TheNoteTakingApp__Windows_Forms_
             this.ToolStripStatusLabel1 = toolStripStatusLabel1;
         }
 
-
+        //Function to save the current written note: 
         private void button1_Click(object sender, EventArgs e)
         {
             string author = authorTextBox.Text;
@@ -46,12 +46,14 @@ namespace TheNoteTakingApp__Windows_Forms_
             string message = messageTextBox.Text;
             bool secret = secretCheckBox.Checked;
 
+            //Den här vill jag ju spara som CSV i samma vända! 
             NoteManager.CreateNote(author, title, category, message, secret);
+            NoteManager.SaveRecentNote();
             ToolStripStatusLabel1.Text = "Success!";
 
             authorTextBox.Clear();
             titleTextBox.Clear();
-            categoryLabel = default;
+            categoryLabel.ResetText();
             messageTextBox.Clear();
             secretCheckBox.Checked = false;
         }

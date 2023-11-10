@@ -148,6 +148,7 @@
             deleteBtn.TabIndex = 11;
             deleteBtn.Text = "Delete";
             deleteBtn.UseVisualStyleBackColor = true;
+            deleteBtn.Click += deleteBtn_Click;
             // 
             // ViewPanel
             // 

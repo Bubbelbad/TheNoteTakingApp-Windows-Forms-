@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace TheNoteTakingApp__Windows_Forms_
 {
-    public partial class deletePanel : UserControl
+    public partial class DeletePanel : UserControl
     {
         NoteManager NoteManager = null;
-        public deletePanel()
+
+        public DeletePanel()
         {
             InitializeComponent();
         }

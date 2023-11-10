@@ -10,15 +10,18 @@ using System.Windows.Forms;
 
 namespace TheNoteTakingApp__Windows_Forms_
 {
-    public partial class viewPanel : UserControl
+    public partial class ViewPanel : UserControl
     {
         NoteManager NoteManager = null;
 
-        public viewPanel()
+
+
+        public ViewPanel()
         {
             InitializeComponent();
 
         }
+
 
 
         //Importing the same Manager as every panel has to edit the notes
@@ -49,8 +52,9 @@ namespace TheNoteTakingApp__Windows_Forms_
 
 
 
-        private void refreshBtn_Click(object sender, EventArgs e)
+        public void RefreshListBox()
         {
+            availableListBox.Items.Clear();
             int index = 0;
             foreach (Note note in NoteManager.listOfNotes)
             {
@@ -66,6 +70,27 @@ namespace TheNoteTakingApp__Windows_Forms_
                     availableListBox.Items.Add($"{note.Title}");
                     index++;
                 }
+            }
+
+        }
+
+
+        //Load function - Här ska man kunna hämta filer med olika note-objekt.
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            NoteManager.Load();
+            RefreshListBox();
+
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            int index = availableListBox.SelectedIndex;
+            if ( index > -1 )
+            {
+                NoteManager.listOfNotes.RemoveAt(index);
+                availableListBox.Items.RemoveAt(index);
+                RefreshListBox();
             }
         }
     }

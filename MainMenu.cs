@@ -13,6 +13,7 @@ namespace TheNoteTakingApp__Windows_Forms_
         private void Form1_Load(object sender, EventArgs e)
         {
             NoteManager noteManager = new NoteManager();
+            noteManager.Load();
             noteManager.CreateNote("Ernest", "Carthusians", "Poem", "We fling up flowers and laugh, we laugh across the wine;\r\n   " +
                 "With wine we dull our souls and careful strains of art;\r\nOur cups are polished skulls round which the roses twine:\r\n   " +
                 "None dares to look at Death who leers and lurks apart.\r\n \r\nMove on, white company, whom that has not sufficed!\r\n   " +
@@ -59,7 +60,7 @@ namespace TheNoteTakingApp__Windows_Forms_
             deletePanel1.Visible = false;
             createPanel1.Visible = false;
             viewPanel1.Visible = true;
-            viewPanel1.Refresh();
+            viewPanel1.RefreshListBox();
 
         }
 
