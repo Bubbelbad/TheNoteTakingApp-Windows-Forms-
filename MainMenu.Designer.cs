@@ -42,10 +42,10 @@
             aboutToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
-            createPanel1 = new createPanel();
-            deletePanel1 = new deletePanel();
+            createPanel1 = new CreatePanel();
+            deletePanel1 = new DeletePanel();
             homePanel1 = new homePanel();
-            viewPanel1 = new viewPanel();
+            viewPanel1 = new ViewPanel();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -96,7 +96,7 @@
             deleteBtn.Name = "deleteBtn";
             deleteBtn.Size = new Size(75, 23);
             deleteBtn.TabIndex = 4;
-            deleteBtn.Text = "Delete";
+            deleteBtn.Text = "Download";
             deleteBtn.UseVisualStyleBackColor = true;
             deleteBtn.Click += deleteBtn_Click;
             // 
@@ -119,19 +119,19 @@
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(180, 22);
+            openToolStripMenuItem.Size = new Size(103, 22);
             openToolStripMenuItem.Text = "&Open";
             // 
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(180, 22);
+            saveToolStripMenuItem.Size = new Size(103, 22);
             saveToolStripMenuItem.Text = "&Save";
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(103, 22);
             exitToolStripMenuItem.Text = "E&xit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -236,9 +236,9 @@
         private ToolStripMenuItem aboutToolStripMenuItem;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
-        private createPanel createPanel1;
-        private deletePanel deletePanel1;
+        private CreatePanel createPanel1;
+        private DeletePanel deletePanel1;
         private homePanel homePanel1;
-        private viewPanel viewPanel1;
+        private ViewPanel viewPanel1;
     }
 }

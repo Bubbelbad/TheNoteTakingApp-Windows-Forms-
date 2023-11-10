@@ -52,11 +52,15 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         private void viewBtn_Click(object sender, EventArgs e)
         {
+            //Här vill jag kunna refresha fönstret med alla notes! Men hur?
+            //Går det att skapa en referens från där dessa panels skapas och använda i varje enskilt interface?
+
             homePanel1.Visible = false;
             deletePanel1.Visible = false;
             createPanel1.Visible = false;
             viewPanel1.Visible = true;
-            
+            viewPanel1.Refresh();
+
         }
 
         private void createBtn_Click(object sender, EventArgs e)

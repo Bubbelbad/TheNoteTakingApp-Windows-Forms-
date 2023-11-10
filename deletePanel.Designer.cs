@@ -1,6 +1,6 @@
 ﻿namespace TheNoteTakingApp__Windows_Forms_
 {
-    partial class deletePanel
+    partial class DeletePanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,11 +30,11 @@
         {
             SuspendLayout();
             // 
-            // deletePanel
+            // DeletePanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Name = "deletePanel";
+            Name = "DeletePanel";
             Size = new Size(656, 344);
             ResumeLayout(false);
         }

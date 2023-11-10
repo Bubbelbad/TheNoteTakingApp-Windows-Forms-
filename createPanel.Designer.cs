@@ -1,6 +1,6 @@
 ﻿namespace TheNoteTakingApp__Windows_Forms_
 {
-    partial class createPanel
+    partial class CreatePanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -128,7 +128,7 @@
             titleTextBox.Size = new Size(120, 23);
             titleTextBox.TabIndex = 5;
             // 
-            // createPanel
+            // CreatePanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -142,7 +142,7 @@
             Controls.Add(messageLabel);
             Controls.Add(categoryLabel);
             Controls.Add(authorLabel);
-            Name = "createPanel";
+            Name = "CreatePanel";
             Size = new Size(656, 344);
             ResumeLayout(false);
             PerformLayout();

@@ -1,6 +1,6 @@
 ﻿namespace TheNoteTakingApp__Windows_Forms_
 {
-    partial class viewPanel
+    partial class ViewPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -136,7 +136,7 @@
             refreshBtn.Name = "refreshBtn";
             refreshBtn.Size = new Size(65, 23);
             refreshBtn.TabIndex = 10;
-            refreshBtn.Text = "Refresh";
+            refreshBtn.Text = "Load";
             refreshBtn.UseVisualStyleBackColor = true;
             refreshBtn.Click += refreshBtn_Click;
             // 
@@ -149,7 +149,7 @@
             deleteBtn.Text = "Delete";
             deleteBtn.UseVisualStyleBackColor = true;
             // 
-            // viewPanel
+            // ViewPanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -165,7 +165,7 @@
             Controls.Add(titleLabel2);
             Controls.Add(availableListBox);
             Controls.Add(availableLabel);
-            Name = "viewPanel";
+            Name = "ViewPanel";
             Size = new Size(656, 344);
             ResumeLayout(false);
             PerformLayout();

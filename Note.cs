@@ -24,10 +24,9 @@ namespace TheNoteTakingApp__Windows_Forms_
             this.Secret = secret;
         }
 
-        public string GetInfo()
+        public string GetCSV()
         {
-            return $"Name: {Title}\n" +
-                   $"Category: {Category}";
+            return Author + "," + Title + "," + Category + "," + Message + "," + Secret;
         }
     }
 }

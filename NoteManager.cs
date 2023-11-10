@@ -17,5 +17,53 @@ namespace TheNoteTakingApp__Windows_Forms_
             listOfNotes.Add(new Note(author, title, category, message, secret));
         }
 
+
+
+        public string path = "notes.csv";
+        public void SaveAll()
+        {
+            StreamWriter streamWriter = new StreamWriter(path);
+            foreach (Note note in listOfNotes)
+            {
+                streamWriter.WriteLine(note.GetCSV());
+            }
+            streamWriter.Close();
+        }
+
+        public void SaveOne(Note note)
+        {
+            StreamWriter streamWriter = new StreamWriter(path);
+
+
+        }
+
+        //To load all notes from csv
+        private void Load()
+        {
+            listOfNotes.Clear();
+            using (StreamReader reader = new StreamReader(path))
+            {
+                string line = reader.ReadLine();
+                try
+                {
+                    while (line != null)
+                    {
+                        string[] strings = line.Split(",");
+                        string author = strings[0];
+                        string title = strings[1];
+                        string category = strings[2];
+                        string message = strings[3];
+                        bool secret = Convert.ToBoolean(strings[4]);
+
+                        line = reader.ReadLine();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                
+            }
+        }
     }
 }
