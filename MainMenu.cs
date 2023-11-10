@@ -3,7 +3,16 @@ namespace TheNoteTakingApp__Windows_Forms_
     public partial class MainMenu : Form
     {
 
+        //Att fixa:
+        // - Gör så att delete även tar bort CSV
+        // - Se till att alla filerna sparas som CSV. Nu verkar inte alla komma med vid omstart? 
+        // - Finslipa interface. Kanske ändra färger och greja runt lite? DarkTheme vore ju att föredra. 
+        // - Skapa en funktion för att exportera både CSV och Json
+        // - Skapa en dialogruta som öppnas, där man kan välja vilka flier som ska importeras. (Både Json och CSV)
 
+
+
+        NoteManager noteManager1;
         public MainMenu()
         {
             InitializeComponent();
@@ -13,6 +22,7 @@ namespace TheNoteTakingApp__Windows_Forms_
         private void Form1_Load(object sender, EventArgs e)
         {
             NoteManager noteManager = new NoteManager();
+            noteManager1 = noteManager;
             noteManager.Load();
             noteManager.CreateNote("Ernest", "Carthusians", "Poem", "We fling up flowers and laugh, we laugh across the wine;\r\n   " +
                 "With wine we dull our souls and careful strains of art;\r\nOur cups are polished skulls round which the roses twine:\r\n   " +
@@ -53,14 +63,12 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         private void viewBtn_Click(object sender, EventArgs e)
         {
-            //Här vill jag kunna refresha fönstret med alla notes! Men hur?
-            //Går det att skapa en referens från där dessa panels skapas och använda i varje enskilt interface?
 
             homePanel1.Visible = false;
             deletePanel1.Visible = false;
             createPanel1.Visible = false;
             viewPanel1.Visible = true;
-            viewPanel1.RefreshListBox();
+            viewPanel1.RefreshListBox(); //Gör så att ListBox blir refreshad varje gång jag går in i ViewPanel
 
         }
 
@@ -89,6 +97,7 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            noteManager1.SaveAll();
             System.Environment.Exit(0);
         }
     }
