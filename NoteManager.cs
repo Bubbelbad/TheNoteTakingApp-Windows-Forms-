@@ -22,7 +22,7 @@ namespace TheNoteTakingApp__Windows_Forms_
         public string path = "notes.csv";
         public void SaveAll()
         {
-            StreamWriter streamWriter = new StreamWriter(path);
+            StreamWriter streamWriter = new StreamWriter(path, true);
             foreach (Note note in listOfNotes)
             {
                 streamWriter.WriteLine(note.GetCSV());

@@ -38,6 +38,10 @@
             openToolStripMenuItem = new ToolStripMenuItem();
             saveToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
+            customToolStripMenuItem = new ToolStripMenuItem();
+            switchThemeToolStripMenuItem = new ToolStripMenuItem();
+            darkToolStripMenuItem = new ToolStripMenuItem();
+            unicornToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
@@ -46,6 +50,7 @@
             deletePanel1 = new DeletePanel();
             homePanel1 = new homePanel();
             viewPanel1 = new ViewPanel();
+            defaultToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -102,7 +107,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, customToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(761, 24);
@@ -135,6 +140,33 @@
             exitToolStripMenuItem.Text = "E&xit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
+            // customToolStripMenuItem
+            // 
+            customToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { switchThemeToolStripMenuItem });
+            customToolStripMenuItem.Name = "customToolStripMenuItem";
+            customToolStripMenuItem.Size = new Size(46, 20);
+            customToolStripMenuItem.Text = "&Tools";
+            // 
+            // switchThemeToolStripMenuItem
+            // 
+            switchThemeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { defaultToolStripMenuItem, darkToolStripMenuItem, unicornToolStripMenuItem });
+            switchThemeToolStripMenuItem.Name = "switchThemeToolStripMenuItem";
+            switchThemeToolStripMenuItem.Size = new Size(180, 22);
+            switchThemeToolStripMenuItem.Text = "T&heme";
+            switchThemeToolStripMenuItem.Click += switchThemeToolStripMenuItem_Click;
+            // 
+            // darkToolStripMenuItem
+            // 
+            darkToolStripMenuItem.Name = "darkToolStripMenuItem";
+            darkToolStripMenuItem.Size = new Size(116, 22);
+            darkToolStripMenuItem.Text = "Dark";
+            // 
+            // unicornToolStripMenuItem
+            // 
+            unicornToolStripMenuItem.Name = "unicornToolStripMenuItem";
+            unicornToolStripMenuItem.Size = new Size(116, 22);
+            unicornToolStripMenuItem.Text = "Unicorn";
+            // 
             // helpToolStripMenuItem
             // 
             helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem });
@@ -145,7 +177,7 @@
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(107, 22);
+            aboutToolStripMenuItem.Size = new Size(180, 22);
             aboutToolStripMenuItem.Text = "&About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
@@ -191,6 +223,12 @@
             viewPanel1.Name = "viewPanel1";
             viewPanel1.Size = new Size(656, 344);
             viewPanel1.TabIndex = 11;
+            // 
+            // defaultToolStripMenuItem
+            // 
+            defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
+            defaultToolStripMenuItem.Size = new Size(116, 22);
+            defaultToolStripMenuItem.Text = "Default";
             // 
             // MainMenu
             // 
@@ -240,5 +278,10 @@
         private DeletePanel deletePanel1;
         private homePanel homePanel1;
         private ViewPanel viewPanel1;
+        private ToolStripMenuItem customToolStripMenuItem;
+        private ToolStripMenuItem switchThemeToolStripMenuItem;
+        private ToolStripMenuItem darkToolStripMenuItem;
+        private ToolStripMenuItem unicornToolStripMenuItem;
+        private ToolStripMenuItem defaultToolStripMenuItem;
     }
 }
