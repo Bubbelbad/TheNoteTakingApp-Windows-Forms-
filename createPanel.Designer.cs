@@ -77,7 +77,7 @@
             // categoryComboBox
             // 
             categoryComboBox.FormattingEnabled = true;
-            categoryComboBox.Items.AddRange(new object[] { "Poem", "Complaint", "Bold Statement", "Kväde", "Secret" });
+            categoryComboBox.Items.AddRange(new object[] { "Poem", "Complaint", "Bold Statement", "Kväde" });
             categoryComboBox.Location = new Point(79, 77);
             categoryComboBox.Name = "categoryComboBox";
             categoryComboBox.Size = new Size(121, 23);
