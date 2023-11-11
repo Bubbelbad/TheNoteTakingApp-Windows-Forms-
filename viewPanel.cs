@@ -96,6 +96,10 @@ namespace TheNoteTakingApp__Windows_Forms_
                 NoteManager.listOfNotes.RemoveAt(index);
                 availableListBox.Items.RemoveAt(index);
                 RefreshListBox();
+                title2.Text = "";
+                author2.Text = "";
+                category2.Text = "";
+                messageTextBox.Clear();
             }
         }
     }
