@@ -44,7 +44,11 @@ namespace TheNoteTakingApp__Windows_Forms_
             string title = titleTextBox.Text;
             string category = categoryComboBox.Text;
             string message = messageTextBox.Text;
-            bool secret = secretCheckBox.Checked;
+            bool secret = false;
+            if (secretCheckBox.Checked)
+            {
+                secret = true;
+            }
 
             //Den här vill jag ju spara som CSV i samma vända! 
             NoteManager.CreateNote(author, title, category, message, secret);

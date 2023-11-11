@@ -46,7 +46,7 @@ namespace TheNoteTakingApp__Windows_Forms_
                 title2.Text = note.Title;
                 author2.Text = note.Author;
                 category2.Text = note.Category;
-                messageTextBox.Text = note.Message;
+                messageTextBox.Text = note.Message.Replace("|", ",");
             }
         }
 
@@ -80,14 +80,16 @@ namespace TheNoteTakingApp__Windows_Forms_
         {
             NoteManager.Load();
             RefreshListBox();
-
         }
+
+
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             int index = availableListBox.SelectedIndex;
             if ( index > -1 )
             {
+                NoteManager.DeleteNoteCSV(index); 
                 NoteManager.listOfNotes.RemoveAt(index);
                 availableListBox.Items.RemoveAt(index);
                 RefreshListBox();

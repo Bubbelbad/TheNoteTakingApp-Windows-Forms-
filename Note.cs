@@ -15,18 +15,19 @@ namespace TheNoteTakingApp__Windows_Forms_
         public string Message { get; set; }
         public bool Secret { get; set; }
 
-        public Note(string author, string title, string category, string message, bool secret)
+        public Note(string author, string title, string category, bool secret, string message)
         {
             this.Author = author;
             this.Title = title; 
             this.Category = category;
-            this.Message = message;
             this.Secret = secret;
+            this.Message = message;
+            
         }
 
         public string GetCSV()
         {
-            return Author + "," + Title + "," + Category + "," + Message + "," + Secret;
+            return Author + "," + Title + "," + Category + "," + Secret + "," + Message;
         }
     }
 }

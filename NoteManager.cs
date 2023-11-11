@@ -14,7 +14,7 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         public void CreateNote (string author, string title, string category, string message, bool secret)
         {
-            listOfNotes.Add(new Note(author, title, category, message, secret));
+            listOfNotes.Add(new Note(author, title, category, secret, message.Replace(",", "|")));
         }
 
 
@@ -31,10 +31,11 @@ namespace TheNoteTakingApp__Windows_Forms_
         }
 
 
+
         //Save the most recent created note
         public void SaveRecentNote()
         {
-            StreamWriter streamWriter = new StreamWriter(path);
+            StreamWriter streamWriter = new StreamWriter(path, true); //Boolean here is to append instead of overwrite
             int index = listOfNotes.Count - 1;
             streamWriter.WriteLine(listOfNotes[index].GetCSV());
             streamWriter.Close();
@@ -57,10 +58,11 @@ namespace TheNoteTakingApp__Windows_Forms_
                         string author = strings[0];
                         string title = strings[1];
                         string category = strings[2];
-                        string message = strings[3];
-                        bool secret = Convert.ToBoolean(strings[4]);
+                        bool secret = Convert.ToBoolean(strings[3]);
+                        string message = strings[4];
+                        
 
-                        Note note = new Note(author, title, category, message, secret);
+                        Note note = new Note(author, title, category, secret, message);
                         listOfNotes.Add(note);
 
                         line = reader.ReadLine();
@@ -71,6 +73,22 @@ namespace TheNoteTakingApp__Windows_Forms_
                     Console.WriteLine(ex.Message);
                 }
             }
+        }
+
+
+
+        public void DeleteNoteCSV(int index)
+        {
+            List<string> linesList = File.ReadAllLines(path).ToList();
+            try
+            {
+                linesList.RemoveAt(index);
+                File.WriteAllLines(path, linesList);
+            }
+            catch
+            {
+                return;
+            }   
         }
     }
 }
