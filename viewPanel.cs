@@ -47,6 +47,7 @@ namespace TheNoteTakingApp__Windows_Forms_
                 author2.Text = note.Author;
                 category2.Text = note.Category;
                 messageTextBox.Text = note.Message.Replace("|", ",");
+                messageTextBox.Text = note.Message.Replace("#", "\r\n");
             }
         }
 

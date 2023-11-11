@@ -12,9 +12,9 @@ namespace TheNoteTakingApp__Windows_Forms_
         public List<Note> listOfNotes = new List<Note>();
 
 
-        public void CreateNote (string author, string title, string category, string message, bool secret)
+        public void CreateNote (string author, string title, string category, bool secret, string message)
         {
-            listOfNotes.Add(new Note(author, title, category, secret, message.Replace(",", "|")));
+            listOfNotes.Add(new Note(author, title, category, secret, message));
         }
 
 
@@ -60,7 +60,8 @@ namespace TheNoteTakingApp__Windows_Forms_
                         string category = strings[2];
                         bool secret = Convert.ToBoolean(strings[3]);
                         string message = strings[4];
-                        
+                        message.Replace("|", ",");
+                        message.Replace("#,", "\r\n");
 
                         Note note = new Note(author, title, category, secret, message);
                         listOfNotes.Add(note);

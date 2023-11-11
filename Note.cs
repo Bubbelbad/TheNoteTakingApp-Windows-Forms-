@@ -27,6 +27,8 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         public string GetCSV()
         {
+            Message.Replace(",", "|");
+            Message.Replace("\r\n", "#");
             return Author + "," + Title + "," + Category + "," + Secret + "," + Message;
         }
     }

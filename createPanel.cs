@@ -44,6 +44,8 @@ namespace TheNoteTakingApp__Windows_Forms_
             string title = titleTextBox.Text;
             string category = categoryComboBox.Text;
             string message = messageTextBox.Text;
+            message = message.Replace(",", "|");
+            message = message.Replace("\r\n", "#");
             bool secret = false;
             if (secretCheckBox.Checked)
             {
@@ -51,7 +53,7 @@ namespace TheNoteTakingApp__Windows_Forms_
             }
 
             //Den här vill jag ju spara som CSV i samma vända! 
-            NoteManager.CreateNote(author, title, category, message, secret);
+            NoteManager.CreateNote(author, title, category, secret, message);
             NoteManager.SaveRecentNote();
             ToolStripStatusLabel1.Text = "Success!";
 
