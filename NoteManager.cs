@@ -10,7 +10,7 @@ namespace TheNoteTakingApp__Windows_Forms_
     {
 
         public List<Note> listOfNotes = new List<Note>();
-
+        public string path = "notes.csv";
 
         public void CreateNote (string author, string title, string category, bool secret, string message)
         {
@@ -18,11 +18,10 @@ namespace TheNoteTakingApp__Windows_Forms_
         }
 
 
-
-        public string path = "notes.csv";
+        //Not sure if I should keep this function. 
         public void SaveAll()
         {
-            StreamWriter streamWriter = new StreamWriter(path, true);
+            StreamWriter streamWriter = new StreamWriter(path, false);
             foreach (Note note in listOfNotes)
             {
                 streamWriter.WriteLine(note.GetCSV());
@@ -32,7 +31,7 @@ namespace TheNoteTakingApp__Windows_Forms_
 
 
 
-        //Save the most recent created note
+        //Save the most recent created note in CSV
         public void SaveRecentNote()
         {
             StreamWriter streamWriter = new StreamWriter(path, true); //Boolean here is to append instead of overwrite

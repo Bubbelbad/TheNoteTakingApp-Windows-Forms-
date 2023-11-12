@@ -40,6 +40,7 @@
             exitToolStripMenuItem = new ToolStripMenuItem();
             customToolStripMenuItem = new ToolStripMenuItem();
             switchThemeToolStripMenuItem = new ToolStripMenuItem();
+            defaultToolStripMenuItem = new ToolStripMenuItem();
             darkToolStripMenuItem = new ToolStripMenuItem();
             unicornToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
@@ -50,7 +51,6 @@
             deletePanel1 = new DeletePanel();
             homePanel1 = new homePanel();
             viewPanel1 = new ViewPanel();
-            defaultToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -124,19 +124,20 @@
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(103, 22);
+            openToolStripMenuItem.Size = new Size(180, 22);
             openToolStripMenuItem.Text = "&Open";
+            openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(103, 22);
+            saveToolStripMenuItem.Size = new Size(180, 22);
             saveToolStripMenuItem.Text = "&Save";
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(103, 22);
+            exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "E&xit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -151,9 +152,15 @@
             // 
             switchThemeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { defaultToolStripMenuItem, darkToolStripMenuItem, unicornToolStripMenuItem });
             switchThemeToolStripMenuItem.Name = "switchThemeToolStripMenuItem";
-            switchThemeToolStripMenuItem.Size = new Size(180, 22);
+            switchThemeToolStripMenuItem.Size = new Size(110, 22);
             switchThemeToolStripMenuItem.Text = "T&heme";
             switchThemeToolStripMenuItem.Click += switchThemeToolStripMenuItem_Click;
+            // 
+            // defaultToolStripMenuItem
+            // 
+            defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
+            defaultToolStripMenuItem.Size = new Size(116, 22);
+            defaultToolStripMenuItem.Text = "Default";
             // 
             // darkToolStripMenuItem
             // 
@@ -177,7 +184,7 @@
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(180, 22);
+            aboutToolStripMenuItem.Size = new Size(107, 22);
             aboutToolStripMenuItem.Text = "&About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
@@ -223,12 +230,6 @@
             viewPanel1.Name = "viewPanel1";
             viewPanel1.Size = new Size(656, 344);
             viewPanel1.TabIndex = 11;
-            // 
-            // defaultToolStripMenuItem
-            // 
-            defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            defaultToolStripMenuItem.Size = new Size(116, 22);
-            defaultToolStripMenuItem.Text = "Default";
             // 
             // MainMenu
             // 

@@ -13,6 +13,7 @@ namespace TheNoteTakingApp__Windows_Forms_
     public partial class ViewPanel : UserControl
     {
         NoteManager NoteManager = null;
+        ToolStripStatusLabel ToolStripStatusLabel1 = null;
 
 
 
