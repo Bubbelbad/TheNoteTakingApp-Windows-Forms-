@@ -21,7 +21,7 @@ namespace TheNoteTakingApp__Windows_Forms_
         //Not sure if I should keep this function. 
         public void SaveAll()
         {
-            StreamWriter streamWriter = new StreamWriter(path, false);
+            StreamWriter streamWriter = new StreamWriter(path, true);
             foreach (Note note in listOfNotes)
             {
                 streamWriter.WriteLine(note.GetCSV());
