@@ -40,6 +40,7 @@
             messageTextBox = new TextBox();
             refreshBtn = new Button();
             deleteBtn = new Button();
+            editButton = new Button();
             SuspendLayout();
             // 
             // availableLabel
@@ -132,9 +133,9 @@
             // 
             // refreshBtn
             // 
-            refreshBtn.Location = new Point(22, 292);
+            refreshBtn.Location = new Point(119, 16);
             refreshBtn.Name = "refreshBtn";
-            refreshBtn.Size = new Size(65, 23);
+            refreshBtn.Size = new Size(49, 23);
             refreshBtn.TabIndex = 10;
             refreshBtn.Text = "Load";
             refreshBtn.UseVisualStyleBackColor = true;
@@ -142,18 +143,29 @@
             // 
             // deleteBtn
             // 
-            deleteBtn.Location = new Point(93, 292);
+            deleteBtn.Location = new Point(98, 292);
             deleteBtn.Name = "deleteBtn";
-            deleteBtn.Size = new Size(75, 23);
+            deleteBtn.Size = new Size(70, 23);
             deleteBtn.TabIndex = 11;
             deleteBtn.Text = "Delete";
             deleteBtn.UseVisualStyleBackColor = true;
             deleteBtn.Click += deleteBtn_Click;
             // 
+            // editButton
+            // 
+            editButton.Location = new Point(22, 292);
+            editButton.Name = "editButton";
+            editButton.Size = new Size(70, 23);
+            editButton.TabIndex = 12;
+            editButton.Text = "Edit";
+            editButton.UseVisualStyleBackColor = true;
+            editButton.Click += editButton_Click;
+            // 
             // ViewPanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(editButton);
             Controls.Add(deleteBtn);
             Controls.Add(refreshBtn);
             Controls.Add(messageTextBox);
@@ -186,5 +198,6 @@
         private TextBox messageTextBox;
         private Button refreshBtn;
         private Button deleteBtn;
+        private Button editButton;
     }
 }

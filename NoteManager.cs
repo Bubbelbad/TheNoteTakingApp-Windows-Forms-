@@ -90,5 +90,10 @@ namespace TheNoteTakingApp__Windows_Forms_
                 return;
             }   
         }
+
+        public void ChangePath(string newPath)
+        {
+            path = newPath;  
+        }
     }
 }

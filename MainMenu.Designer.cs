@@ -35,8 +35,11 @@
             deleteBtn = new Button();
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
-            openToolStripMenuItem = new ToolStripMenuItem();
             saveToolStripMenuItem = new ToolStripMenuItem();
+            openToolStripMenuItem = new ToolStripMenuItem();
+            exportToolStripMenuItem = new ToolStripMenuItem();
+            exportToTextToolStripMenuItem = new ToolStripMenuItem();
+            toJsonToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
             customToolStripMenuItem = new ToolStripMenuItem();
             switchThemeToolStripMenuItem = new ToolStripMenuItem();
@@ -51,9 +54,6 @@
             deletePanel1 = new DeletePanel();
             homePanel1 = new homePanel();
             viewPanel1 = new ViewPanel();
-            exportToolStripMenuItem = new ToolStripMenuItem();
-            toJsonToolStripMenuItem = new ToolStripMenuItem();
-            exportToTextToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -124,6 +124,12 @@
             fileToolStripMenuItem.Size = new Size(37, 20);
             fileToolStripMenuItem.Text = "&File";
             // 
+            // saveToolStripMenuItem
+            // 
+            saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            saveToolStripMenuItem.Size = new Size(108, 22);
+            saveToolStripMenuItem.Text = "&Save";
+            // 
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
@@ -131,11 +137,24 @@
             openToolStripMenuItem.Text = "&Open";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
-            // saveToolStripMenuItem
+            // exportToolStripMenuItem
             // 
-            saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(108, 22);
-            saveToolStripMenuItem.Text = "&Save";
+            exportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exportToTextToolStripMenuItem, toJsonToolStripMenuItem });
+            exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            exportToolStripMenuItem.Size = new Size(108, 22);
+            exportToolStripMenuItem.Text = "&Export";
+            // 
+            // exportToTextToolStripMenuItem
+            // 
+            exportToTextToolStripMenuItem.Name = "exportToTextToolStripMenuItem";
+            exportToTextToolStripMenuItem.Size = new Size(148, 22);
+            exportToTextToolStripMenuItem.Text = "Export to Text";
+            // 
+            // toJsonToolStripMenuItem
+            // 
+            toJsonToolStripMenuItem.Name = "toJsonToolStripMenuItem";
+            toJsonToolStripMenuItem.Size = new Size(148, 22);
+            toJsonToolStripMenuItem.Text = "Export to Json";
             // 
             // exitToolStripMenuItem
             // 
@@ -233,25 +252,6 @@
             viewPanel1.Name = "viewPanel1";
             viewPanel1.Size = new Size(656, 344);
             viewPanel1.TabIndex = 11;
-            // 
-            // exportToolStripMenuItem
-            // 
-            exportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exportToTextToolStripMenuItem, toJsonToolStripMenuItem });
-            exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            exportToolStripMenuItem.Size = new Size(108, 22);
-            exportToolStripMenuItem.Text = "&Export";
-            // 
-            // toJsonToolStripMenuItem
-            // 
-            toJsonToolStripMenuItem.Name = "toJsonToolStripMenuItem";
-            toJsonToolStripMenuItem.Size = new Size(148, 22);
-            toJsonToolStripMenuItem.Text = "Export to Json";
-            // 
-            // exportToTextToolStripMenuItem
-            // 
-            exportToTextToolStripMenuItem.Name = "exportToTextToolStripMenuItem";
-            exportToTextToolStripMenuItem.Size = new Size(148, 22);
-            exportToTextToolStripMenuItem.Text = "Export to Text";
             // 
             // MainMenu
             // 

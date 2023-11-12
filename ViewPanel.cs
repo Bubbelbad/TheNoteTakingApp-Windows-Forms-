@@ -91,9 +91,9 @@ namespace TheNoteTakingApp__Windows_Forms_
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             int index = availableListBox.SelectedIndex;
-            if ( index > -1 )
+            if (index > -1)
             {
-                NoteManager.DeleteNoteCSV(index); 
+                NoteManager.DeleteNoteCSV(index);
                 NoteManager.listOfNotes.RemoveAt(index);
                 availableListBox.Items.RemoveAt(index);
                 RefreshListBox();
@@ -101,6 +101,16 @@ namespace TheNoteTakingApp__Windows_Forms_
                 author2.Text = "";
                 category2.Text = "";
                 messageTextBox.Clear();
+            }
+        }
+
+        //Function to edit existing note
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            int index = availableListBox.SelectedIndex;
+            if (index > -1)
+            {
+                //To be continued...
             }
         }
     }
