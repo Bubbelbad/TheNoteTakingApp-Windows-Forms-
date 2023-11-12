@@ -15,27 +15,24 @@ namespace TheNoteTakingApp__Windows_Forms_
         NoteManager NoteManager = null;
         ToolStripStatusLabel ToolStripStatusLabel1 = null;
 
-        string author;
-        string title;
-        string category;
-        string message;
-        bool secret;
 
         public CreatePanel()
         {
             InitializeComponent();
-
         }
+
 
         public void SetManager(NoteManager noteManager)
         {
             this.NoteManager = noteManager;
         }
 
+
         public void ImportToolStrip(ToolStripStatusLabel toolStripStatusLabel1)
         {
             this.ToolStripStatusLabel1 = toolStripStatusLabel1;
         }
+
 
         //Function to save the current written note: 
         private void button1_Click(object sender, EventArgs e)
@@ -52,7 +49,6 @@ namespace TheNoteTakingApp__Windows_Forms_
                 secret = true;
             }
 
-            //Den här vill jag ju spara som CSV i samma vända! 
             NoteManager.CreateNote(author, title, category, secret, message);
             NoteManager.SaveRecentNote();
             ToolStripStatusLabel1.Text = "Success!";
@@ -63,7 +59,5 @@ namespace TheNoteTakingApp__Windows_Forms_
             messageTextBox.Clear();
             secretCheckBox.Checked = false;
         }
-
-
     }
 }
