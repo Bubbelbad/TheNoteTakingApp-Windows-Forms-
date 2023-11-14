@@ -105,12 +105,32 @@ namespace TheNoteTakingApp__Windows_Forms_
         }
 
 
-        public void ExportToText(Note note)
+        public void ExportToText()
         {
-            Console.WriteLine("Name your file");
-            string fileName = Console.ReadLine(); 
-
-            
+            string fileName = "newTest.txt";
+            File.Create(fileName).Close(); //Erasing all the previous text in path
+            using (StreamWriter sw = new StreamWriter(fileName)) //Rewriting with the edited note updated.
+            {
+                foreach (Note note in listOfNotes)
+                {
+                    sw.WriteLine(note.GetText());
+                }
+            }
+            // Console.WriteLine("Name your file");
+            // string fileName = Console.ReadLine();
+            // string fileName = "newTest.txt";
+            //            // if (!File.Exists(fileName))
+            // {
+            //     var myFile = File.Create(fileName);
+            //     myFile.Close();
+            // }
+            //            // using (StreamWriter writer = new StreamWriter(fileName))
+            // {
+            //     foreach (Note textnote in listOfNotes)
+            //     {
+            //         writer.WriteLine(textnote.GetText);
+            //     }
+            // }
         }
 
         public void ChangePath(string newPath)

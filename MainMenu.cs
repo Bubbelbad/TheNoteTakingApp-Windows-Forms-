@@ -5,10 +5,9 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         //Att fixa:
         // - Fixa så att theme åtminstone ändrar bakgrund 
-        // - Skapa en funktion för att exportera till text och Json
-        // - Gör klart open-funktionen, så man kan öppna några befintliga .csv filer
-
-
+        // - Gör klart så man kan välja mapp när man exporterar Text
+        // - Fixa en funktion för att exportera Json
+        
 
 
         NoteManager noteManager1;
@@ -121,6 +120,13 @@ namespace TheNoteTakingApp__Windows_Forms_
                 noteManager1.Load();
                 viewBtn_Click(sender, e);
             }
+        }
+
+        private void exportToTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportForm exportForm = new ExportForm();
+            exportForm.ShowDialog();
+            noteManager1.ExportToText();
         }
     }
 }

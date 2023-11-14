@@ -149,6 +149,7 @@
             exportToTextToolStripMenuItem.Name = "exportToTextToolStripMenuItem";
             exportToTextToolStripMenuItem.Size = new Size(180, 22);
             exportToTextToolStripMenuItem.Text = "Export to Text";
+            exportToTextToolStripMenuItem.Click += exportToTextToolStripMenuItem_Click;
             // 
             // toJsonToolStripMenuItem
             // 
