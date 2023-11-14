@@ -9,4 +9,10 @@ Some of the messages will be pre-written examples (for first time use) and some 
 - There needs to be a list of objects that you can add to and remove from.
 - These objects should be saved as CSV, and then again uploaded and used in the program.
 
+## what I want to add:
+- Possibility to save the collection of notes as CSV, Text and Json.
+- To be able to change theme (at least the background hey)
+- To use both panels and pop-up windows.
+- Being able to open different files from an explorer to use and edit in the program - CSV only, because sin of sloth ;)
+
 ![Preview](https://github.com/Bubbelbad/TheNoteTakingApp-Windows-Forms-/blob/master/Screenshot%202023-11-08%20210705.png?raw=true)
