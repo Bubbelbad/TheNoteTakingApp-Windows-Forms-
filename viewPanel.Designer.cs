@@ -47,95 +47,98 @@
             // 
             availableLabel.AutoSize = true;
             availableLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            availableLabel.Location = new Point(22, 24);
+            availableLabel.Location = new Point(25, 137);
             availableLabel.Name = "availableLabel";
-            availableLabel.Size = new Size(99, 15);
+            availableLabel.Size = new Size(127, 20);
             availableLabel.TabIndex = 0;
             availableLabel.Text = "Available Notes: ";
             // 
             // availableListBox
             // 
             availableListBox.FormattingEnabled = true;
-            availableListBox.ItemHeight = 15;
-            availableListBox.Location = new Point(22, 42);
+            availableListBox.ItemHeight = 20;
+            availableListBox.Location = new Point(25, 156);
+            availableListBox.Margin = new Padding(3, 4, 3, 4);
             availableListBox.Name = "availableListBox";
-            availableListBox.Size = new Size(146, 244);
+            availableListBox.Size = new Size(166, 224);
             availableListBox.TabIndex = 1;
             availableListBox.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // titleLabel2
             // 
             titleLabel2.AutoSize = true;
-            titleLabel2.Location = new Point(174, 62);
+            titleLabel2.Location = new Point(25, 59);
             titleLabel2.Name = "titleLabel2";
-            titleLabel2.Size = new Size(35, 15);
+            titleLabel2.Size = new Size(45, 20);
             titleLabel2.TabIndex = 2;
             titleLabel2.Text = "Title: ";
             // 
             // authorLabel2
             // 
             authorLabel2.AutoSize = true;
-            authorLabel2.Location = new Point(174, 41);
+            authorLabel2.Location = new Point(25, 31);
             authorLabel2.Name = "authorLabel2";
-            authorLabel2.Size = new Size(47, 15);
+            authorLabel2.Size = new Size(57, 20);
             authorLabel2.TabIndex = 3;
             authorLabel2.Text = "Author:";
             // 
             // title2
             // 
             title2.AutoSize = true;
-            title2.Location = new Point(237, 62);
+            title2.Location = new Point(97, 59);
             title2.Name = "title2";
-            title2.Size = new Size(0, 15);
+            title2.Size = new Size(0, 20);
             title2.TabIndex = 4;
             // 
             // author2
             // 
             author2.AutoSize = true;
-            author2.Location = new Point(237, 41);
+            author2.Location = new Point(97, 31);
             author2.Name = "author2";
-            author2.Size = new Size(0, 15);
+            author2.Size = new Size(0, 20);
             author2.TabIndex = 5;
             // 
             // categoryLabel2
             // 
             categoryLabel2.AutoSize = true;
-            categoryLabel2.Location = new Point(174, 82);
+            categoryLabel2.Location = new Point(25, 85);
             categoryLabel2.Name = "categoryLabel2";
-            categoryLabel2.Size = new Size(61, 15);
+            categoryLabel2.Size = new Size(76, 20);
             categoryLabel2.TabIndex = 6;
             categoryLabel2.Text = "Category: ";
             // 
             // category2
             // 
             category2.AutoSize = true;
-            category2.Location = new Point(237, 82);
+            category2.Location = new Point(97, 85);
             category2.Name = "category2";
-            category2.Size = new Size(0, 15);
+            category2.Size = new Size(0, 20);
             category2.TabIndex = 7;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(330, 24);
+            label6.Location = new Point(252, 31);
             label6.Name = "label6";
-            label6.Size = new Size(56, 15);
+            label6.Size = new Size(70, 20);
             label6.TabIndex = 8;
             label6.Text = "Message:";
             // 
             // messageTextBox
             // 
-            messageTextBox.Location = new Point(330, 42);
+            messageTextBox.Location = new Point(328, 31);
+            messageTextBox.Margin = new Padding(3, 4, 3, 4);
             messageTextBox.Multiline = true;
             messageTextBox.Name = "messageTextBox";
-            messageTextBox.Size = new Size(323, 289);
+            messageTextBox.Size = new Size(419, 353);
             messageTextBox.TabIndex = 9;
             // 
             // refreshBtn
             // 
-            refreshBtn.Location = new Point(119, 16);
+            refreshBtn.Location = new Point(197, 156);
+            refreshBtn.Margin = new Padding(3, 4, 3, 4);
             refreshBtn.Name = "refreshBtn";
-            refreshBtn.Size = new Size(49, 23);
+            refreshBtn.Size = new Size(56, 31);
             refreshBtn.TabIndex = 10;
             refreshBtn.Text = "Load";
             refreshBtn.UseVisualStyleBackColor = true;
@@ -143,9 +146,10 @@
             // 
             // deleteBtn
             // 
-            deleteBtn.Location = new Point(98, 292);
+            deleteBtn.Location = new Point(112, 400);
+            deleteBtn.Margin = new Padding(3, 4, 3, 4);
             deleteBtn.Name = "deleteBtn";
-            deleteBtn.Size = new Size(70, 23);
+            deleteBtn.Size = new Size(80, 31);
             deleteBtn.TabIndex = 11;
             deleteBtn.Text = "Delete";
             deleteBtn.UseVisualStyleBackColor = true;
@@ -153,9 +157,10 @@
             // 
             // editButton
             // 
-            editButton.Location = new Point(22, 292);
+            editButton.Location = new Point(25, 400);
+            editButton.Margin = new Padding(3, 4, 3, 4);
             editButton.Name = "editButton";
-            editButton.Size = new Size(70, 23);
+            editButton.Size = new Size(80, 31);
             editButton.TabIndex = 12;
             editButton.Text = "Edit";
             editButton.UseVisualStyleBackColor = true;
@@ -163,7 +168,7 @@
             // 
             // ViewPanel
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(editButton);
             Controls.Add(deleteBtn);
@@ -178,8 +183,9 @@
             Controls.Add(titleLabel2);
             Controls.Add(availableListBox);
             Controls.Add(availableLabel);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "ViewPanel";
-            Size = new Size(656, 344);
+            Size = new Size(750, 459);
             ResumeLayout(false);
             PerformLayout();
         }

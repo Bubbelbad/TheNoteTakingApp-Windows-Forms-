@@ -70,11 +70,11 @@ namespace TheNoteTakingApp__Windows_Forms_
             secretCheckBox.Checked = false;
         }
 
-        public void EditNote (Note note)
+        public void EditNote(Note note)
         {
             edit = true;
             authorTextBox.Text = note.Author;
-            titleTextBox.Text =note.Title;
+            titleTextBox.Text = note.Title;
             categoryComboBox.Text = note.Category;
             messageTextBox.Text = note.Message;
             editId = note.Id;

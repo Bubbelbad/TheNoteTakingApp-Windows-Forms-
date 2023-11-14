@@ -1,3 +1,5 @@
+using System.Text.Json;
+
 namespace TheNoteTakingApp__Windows_Forms_
 {
     public partial class MainMenu : Form
@@ -7,8 +9,25 @@ namespace TheNoteTakingApp__Windows_Forms_
         // - Fixa så att theme åtminstone ändrar bakgrund 
         // - Gör klart så man kan välja mapp när man exporterar Text
         // - Fixa en funktion för att exportera Json
-        
 
+        //Att använda när jag kommer tillabak och kodar json imorgon; 
+
+        //public void Json()
+        //{
+        //    using System.Text.Json;
+        //    using System.Text.Json.Serialization;
+        //
+        //    List<data> _data = new List<data>();
+        //    _data.Add(new data()
+        //    {
+        //        Id = 1,
+        //        SSN = 2,
+        //        Message = "A Message"
+        //    });
+        //
+        //    string json = JsonSerializer.Serialize(_data);
+        //    File.WriteAllText(@"D:\path.json", json);
+        //}
 
         NoteManager noteManager1;
         public MainMenu()

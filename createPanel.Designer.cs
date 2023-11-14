@@ -43,51 +43,54 @@
             // authorLabel
             // 
             authorLabel.AutoSize = true;
-            authorLabel.Location = new Point(16, 25);
+            authorLabel.Location = new Point(18, 33);
             authorLabel.Name = "authorLabel";
-            authorLabel.Size = new Size(47, 15);
+            authorLabel.Size = new Size(57, 20);
             authorLabel.TabIndex = 1;
             authorLabel.Text = "Author:";
             // 
             // categoryLabel
             // 
             categoryLabel.AutoSize = true;
-            categoryLabel.Location = new Point(16, 80);
+            categoryLabel.Location = new Point(18, 107);
             categoryLabel.Name = "categoryLabel";
-            categoryLabel.Size = new Size(58, 15);
+            categoryLabel.Size = new Size(72, 20);
             categoryLabel.TabIndex = 3;
             categoryLabel.Text = "Category:";
             // 
             // messageLabel
             // 
             messageLabel.AutoSize = true;
-            messageLabel.Location = new Point(224, 25);
+            messageLabel.Location = new Point(256, 33);
             messageLabel.Name = "messageLabel";
-            messageLabel.Size = new Size(56, 15);
+            messageLabel.Size = new Size(70, 20);
             messageLabel.TabIndex = 8;
             messageLabel.Text = "Message:";
             // 
             // authorTextBox
             // 
-            authorTextBox.Location = new Point(81, 22);
+            authorTextBox.Location = new Point(93, 29);
+            authorTextBox.Margin = new Padding(3, 4, 3, 4);
             authorTextBox.Name = "authorTextBox";
-            authorTextBox.Size = new Size(120, 23);
+            authorTextBox.Size = new Size(137, 27);
             authorTextBox.TabIndex = 4;
             // 
             // categoryComboBox
             // 
             categoryComboBox.FormattingEnabled = true;
             categoryComboBox.Items.AddRange(new object[] { "Poem", "Complaint", "Bold Statement", "Kväde" });
-            categoryComboBox.Location = new Point(79, 77);
+            categoryComboBox.Location = new Point(90, 103);
+            categoryComboBox.Margin = new Padding(3, 4, 3, 4);
             categoryComboBox.Name = "categoryComboBox";
-            categoryComboBox.Size = new Size(121, 23);
+            categoryComboBox.Size = new Size(138, 28);
             categoryComboBox.TabIndex = 6;
             // 
             // saveCreateButton
             // 
-            saveCreateButton.Location = new Point(286, 301);
+            saveCreateButton.Location = new Point(327, 394);
+            saveCreateButton.Margin = new Padding(3, 4, 3, 4);
             saveCreateButton.Name = "saveCreateButton";
-            saveCreateButton.Size = new Size(53, 23);
+            saveCreateButton.Size = new Size(61, 31);
             saveCreateButton.TabIndex = 10;
             saveCreateButton.Text = "Save";
             saveCreateButton.UseVisualStyleBackColor = true;
@@ -95,18 +98,20 @@
             // 
             // messageTextBox
             // 
-            messageTextBox.Location = new Point(286, 25);
+            messageTextBox.Location = new Point(327, 33);
+            messageTextBox.Margin = new Padding(3, 4, 3, 4);
             messageTextBox.Multiline = true;
             messageTextBox.Name = "messageTextBox";
-            messageTextBox.Size = new Size(367, 270);
+            messageTextBox.Size = new Size(419, 353);
             messageTextBox.TabIndex = 9;
             // 
             // secretCheckBox
             // 
             secretCheckBox.AutoSize = true;
-            secretCheckBox.Location = new Point(80, 110);
+            secretCheckBox.Location = new Point(91, 147);
+            secretCheckBox.Margin = new Padding(3, 4, 3, 4);
             secretCheckBox.Name = "secretCheckBox";
-            secretCheckBox.Size = new Size(63, 19);
+            secretCheckBox.Size = new Size(79, 24);
             secretCheckBox.TabIndex = 7;
             secretCheckBox.Text = "Secret?";
             secretCheckBox.UseVisualStyleBackColor = true;
@@ -115,22 +120,23 @@
             // 
             titleLabel.AccessibleName = "Default";
             titleLabel.AutoSize = true;
-            titleLabel.Location = new Point(16, 51);
+            titleLabel.Location = new Point(18, 68);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(35, 15);
+            titleLabel.Size = new Size(45, 20);
             titleLabel.TabIndex = 2;
             titleLabel.Text = "Title: ";
             // 
             // titleTextBox
             // 
-            titleTextBox.Location = new Point(80, 48);
+            titleTextBox.Location = new Point(91, 64);
+            titleTextBox.Margin = new Padding(3, 4, 3, 4);
             titleTextBox.Name = "titleTextBox";
-            titleTextBox.Size = new Size(120, 23);
+            titleTextBox.Size = new Size(137, 27);
             titleTextBox.TabIndex = 5;
             // 
             // CreatePanel
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(titleTextBox);
             Controls.Add(titleLabel);
@@ -142,8 +148,9 @@
             Controls.Add(messageLabel);
             Controls.Add(categoryLabel);
             Controls.Add(authorLabel);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "CreatePanel";
-            Size = new Size(656, 344);
+            Size = new Size(750, 459);
             ResumeLayout(false);
             PerformLayout();
         }
