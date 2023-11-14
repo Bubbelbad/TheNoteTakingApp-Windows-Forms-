@@ -14,7 +14,8 @@ namespace TheNoteTakingApp__Windows_Forms_
     {
         NoteManager NoteManager = null;
         ToolStripStatusLabel ToolStripStatusLabel1 = null;
-
+        public bool edit = false;
+        public int editId;
 
         public CreatePanel()
         {
@@ -49,8 +50,17 @@ namespace TheNoteTakingApp__Windows_Forms_
                 secret = true;
             }
 
-            NoteManager.CreateNote(author, title, category, secret, message);
-            NoteManager.SaveRecentNote();
+            if (edit == true)
+            {
+                NoteManager.ReplaceEditedNote(editId, author, title, category, secret, message);
+                edit = false;
+            }
+            else
+            {
+                NoteManager.CreateNote(author, title, category, secret, message);
+                NoteManager.SaveRecentNote();
+            }
+
             ToolStripStatusLabel1.Text = "Success!";
 
             authorTextBox.Clear();
@@ -58,6 +68,20 @@ namespace TheNoteTakingApp__Windows_Forms_
             categoryLabel.ResetText();
             messageTextBox.Clear();
             secretCheckBox.Checked = false;
+        }
+
+        public void EditNote (Note note)
+        {
+            edit = true;
+            authorTextBox.Text = note.Author;
+            titleTextBox.Text =note.Title;
+            categoryComboBox.Text = note.Category;
+            messageTextBox.Text = note.Message;
+            editId = note.Id;
+            if (note.Secret)
+            {
+                secretCheckBox.Checked = true;
+            }
         }
     }
 }

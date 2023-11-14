@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,18 +20,45 @@ namespace TheNoteTakingApp__Windows_Forms_
         }
 
 
-        //Not sure if I should keep this function. 
-        public void SaveAll()
+        public void ReplaceEditedNote(int editId, string author, string title, string category, bool secret, string message)
         {
-            StreamWriter streamWriter = new StreamWriter(path, true);
             foreach (Note note in listOfNotes)
             {
-                streamWriter.WriteLine(note.GetCSV());
+                if (note.Id == editId)
+                {
+                    note.Author = author;
+                    note.Title = title;
+                    note.Category = category;
+                    note.Secret = secret;
+                    note.Message = message;
+                }
             }
-            streamWriter.Close();
+            using (StreamReader reader = new StreamReader(path))
+            {
+                string line = reader.ReadLine();
+                try
+                {
+                    while (line != null)
+                    {
+                        string[] strings = line.Split(",");
+                        string author1 = strings[1];
+                        string title1 = strings[2];
+                        string category1 = strings[3];
+                        bool secret1 = Convert.ToBoolean(strings[4]);
+                        string message1 = strings[5];
+                        message1.Replace("|", ",");
+                        message1.Replace("#,", "\r\n");
+
+                        line = reader.ReadLine();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            Load();
         }
-
-
 
         //Save the most recent created note in CSV
         public void SaveRecentNote()
@@ -42,7 +71,7 @@ namespace TheNoteTakingApp__Windows_Forms_
 
 
 
-        //To load all notes from csv
+        //To load all notes from CSV-file
         public void Load()
         {
             listOfNotes.Clear();
@@ -54,11 +83,11 @@ namespace TheNoteTakingApp__Windows_Forms_
                     while (line != null)
                     {
                         string[] strings = line.Split(",");
-                        string author = strings[0];
-                        string title = strings[1];
-                        string category = strings[2];
-                        bool secret = Convert.ToBoolean(strings[3]);
-                        string message = strings[4];
+                        string author = strings[1];
+                        string title = strings[2];
+                        string category = strings[3];
+                        bool secret = Convert.ToBoolean(strings[4]);
+                        string message = strings[5];
                         message.Replace("|", ",");
                         message.Replace("#,", "\r\n");
 
@@ -90,6 +119,8 @@ namespace TheNoteTakingApp__Windows_Forms_
                 return;
             }   
         }
+
+
 
         public void ChangePath(string newPath)
         {

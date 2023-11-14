@@ -47,6 +47,7 @@ namespace TheNoteTakingApp__Windows_Forms_
             createPanel1.SetManager(noteManager);
             viewPanel1.SetManager(noteManager);
             deletePanel1.SetManager(noteManager);
+            viewPanel1.SetCreatePanel(createPanel1);
         }
 
 
