@@ -127,39 +127,39 @@
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(108, 22);
+            saveToolStripMenuItem.Size = new Size(180, 22);
             saveToolStripMenuItem.Text = "&Save";
             // 
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(108, 22);
-            openToolStripMenuItem.Text = "&Open";
+            openToolStripMenuItem.Size = new Size(180, 22);
+            openToolStripMenuItem.Text = "&Open Library";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
             // exportToolStripMenuItem
             // 
             exportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exportToTextToolStripMenuItem, toJsonToolStripMenuItem });
             exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            exportToolStripMenuItem.Size = new Size(108, 22);
+            exportToolStripMenuItem.Size = new Size(180, 22);
             exportToolStripMenuItem.Text = "&Export";
             // 
             // exportToTextToolStripMenuItem
             // 
             exportToTextToolStripMenuItem.Name = "exportToTextToolStripMenuItem";
-            exportToTextToolStripMenuItem.Size = new Size(148, 22);
+            exportToTextToolStripMenuItem.Size = new Size(180, 22);
             exportToTextToolStripMenuItem.Text = "Export to Text";
             // 
             // toJsonToolStripMenuItem
             // 
             toJsonToolStripMenuItem.Name = "toJsonToolStripMenuItem";
-            toJsonToolStripMenuItem.Size = new Size(148, 22);
+            toJsonToolStripMenuItem.Size = new Size(180, 22);
             toJsonToolStripMenuItem.Text = "Export to Json";
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(108, 22);
+            exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "E&xit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 

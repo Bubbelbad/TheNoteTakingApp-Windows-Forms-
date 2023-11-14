@@ -91,13 +91,12 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This is a note taking app by Bubbelbad\n\n");
+            MessageBox.Show("A note taking app by Bubbelbad @ Github\n\n");
         }
 
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //noteManager1.SaveAll();
             System.Environment.Exit(0);
         }
 

@@ -12,7 +12,7 @@ namespace TheNoteTakingApp__Windows_Forms_
     {
 
         public List<Note> listOfNotes = new List<Note>();
-        public string path = "notes.csv";
+        public static string path = "notes.csv";
 
         public void CreateNote (string author, string title, string category, bool secret, string message)
         {
@@ -33,28 +33,12 @@ namespace TheNoteTakingApp__Windows_Forms_
                     note.Message = message;
                 }
             }
-            using (StreamReader reader = new StreamReader(path))
+            File.Create(path).Close(); //Erasing all the previous text in path
+            using (StreamWriter sw = new StreamWriter(path, true)) //Rewriting with the edited note updated.
             {
-                string line = reader.ReadLine();
-                try
+                foreach (Note note in listOfNotes)
                 {
-                    while (line != null)
-                    {
-                        string[] strings = line.Split(",");
-                        string author1 = strings[1];
-                        string title1 = strings[2];
-                        string category1 = strings[3];
-                        bool secret1 = Convert.ToBoolean(strings[4]);
-                        string message1 = strings[5];
-                        message1.Replace("|", ",");
-                        message1.Replace("#,", "\r\n");
-
-                        line = reader.ReadLine();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
+                    sw.WriteLine(note.GetCSV());
                 }
             }
             Load();
@@ -88,7 +72,7 @@ namespace TheNoteTakingApp__Windows_Forms_
                         string category = strings[3];
                         bool secret = Convert.ToBoolean(strings[4]);
                         string message = strings[5];
-                        message.Replace("|", ",");
+                        message.Replace("|", ","); //Here I convert back the symbols from the CSV that I changed. 
                         message.Replace("#,", "\r\n");
 
                         Note note = new Note(author, title, category, secret, message);
@@ -121,6 +105,13 @@ namespace TheNoteTakingApp__Windows_Forms_
         }
 
 
+        public void ExportToText(Note note)
+        {
+            Console.WriteLine("Name your file");
+            string fileName = Console.ReadLine(); 
+
+            
+        }
 
         public void ChangePath(string newPath)
         {

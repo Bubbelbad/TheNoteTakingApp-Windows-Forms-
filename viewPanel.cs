@@ -12,9 +12,9 @@ namespace TheNoteTakingApp__Windows_Forms_
 {
     public partial class ViewPanel : UserControl
     {
-        NoteManager NoteManager = null;
-        ToolStripStatusLabel ToolStripStatusLabel1 = null;
-
+        NoteManager NoteManager;
+        ToolStripStatusLabel ToolStripStatusLabel1;
+        CreatePanel CreatePanel;
 
 
         public ViewPanel()
@@ -22,7 +22,6 @@ namespace TheNoteTakingApp__Windows_Forms_
             InitializeComponent();
 
         }
-
 
 
         //Importing the same Manager as every panel has to edit the notes
@@ -33,6 +32,12 @@ namespace TheNoteTakingApp__Windows_Forms_
             {
                 availableListBox.Items.Add($"{note.Title}");
             }
+        }
+
+
+        public void SetCreatePanel(CreatePanel createPanel)
+        {
+            this.CreatePanel = createPanel;
         }
 
 
@@ -74,7 +79,6 @@ namespace TheNoteTakingApp__Windows_Forms_
                     index++;
                 }
             }
-
         }
 
 
@@ -91,12 +95,29 @@ namespace TheNoteTakingApp__Windows_Forms_
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             int index = availableListBox.SelectedIndex;
-            if ( index > -1 )
+            if (index > -1)
             {
-                NoteManager.DeleteNoteCSV(index); 
+                NoteManager.DeleteNoteCSV(index);
                 NoteManager.listOfNotes.RemoveAt(index);
                 availableListBox.Items.RemoveAt(index);
                 RefreshListBox();
+                title2.Text = "";
+                author2.Text = "";
+                category2.Text = "";
+                messageTextBox.Clear();
+            }
+        }
+
+
+        //Function to edit existing note. This sends the note to createPanel with all the info. 
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            int index = availableListBox.SelectedIndex;
+            if (index > -1)
+            {
+                CreatePanel.EditNote(NoteManager.listOfNotes[index]);
+                CreatePanel.Visible = true;
+                Visible = false;
                 title2.Text = "";
                 author2.Text = "";
                 category2.Text = "";

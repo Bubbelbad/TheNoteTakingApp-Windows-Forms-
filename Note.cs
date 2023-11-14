@@ -36,5 +36,19 @@ namespace TheNoteTakingApp__Windows_Forms_
             Message = Message.Replace("\r\n", "#");
             return Id + "," + Author + "," + Title + "," + Category + "," + Secret + "," + Message;
         }
+
+        public string GetText()
+        {
+            return $"Author: {Author} \n" +
+                   $"Title: {Title}\n" +
+                   $"Category: {Category}\n" +
+                   $"Secret: {Secret} \n\n" +
+                   $"Message: {Message}";
+        }
+
+        public string GetJson()
+        {
+            return "this will be json file";
+        }
     }
 }
