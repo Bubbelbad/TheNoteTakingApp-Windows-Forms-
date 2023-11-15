@@ -47,7 +47,7 @@
             // 
             availableLabel.AutoSize = true;
             availableLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            availableLabel.Location = new Point(25, 137);
+            availableLabel.Location = new Point(25, 112);
             availableLabel.Name = "availableLabel";
             availableLabel.Size = new Size(127, 20);
             availableLabel.TabIndex = 0;
@@ -57,10 +57,10 @@
             // 
             availableListBox.FormattingEnabled = true;
             availableListBox.ItemHeight = 20;
-            availableListBox.Location = new Point(25, 156);
+            availableListBox.Location = new Point(25, 136);
             availableListBox.Margin = new Padding(3, 4, 3, 4);
             availableListBox.Name = "availableListBox";
-            availableListBox.Size = new Size(166, 224);
+            availableListBox.Size = new Size(166, 244);
             availableListBox.TabIndex = 1;
             availableListBox.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
@@ -135,7 +135,7 @@
             // 
             // refreshBtn
             // 
-            refreshBtn.Location = new Point(197, 156);
+            refreshBtn.Location = new Point(197, 136);
             refreshBtn.Margin = new Padding(3, 4, 3, 4);
             refreshBtn.Name = "refreshBtn";
             refreshBtn.Size = new Size(56, 31);
