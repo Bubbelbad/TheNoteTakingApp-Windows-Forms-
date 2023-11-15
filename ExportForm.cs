@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 
 namespace TheNoteTakingApp__Windows_Forms_
 {
@@ -14,6 +15,7 @@ namespace TheNoteTakingApp__Windows_Forms_
     {
 
         string folderPath;
+        string fileName;
 
         public ExportForm()
         {
@@ -22,8 +24,7 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         public string FileInput()
         {
-            string file = fileTextBox.Text;
-
+            fileName = fileTextBox.Text;
             return "hihi";
         }
 
@@ -43,14 +44,18 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         private void exportButton_Click(object sender, EventArgs e)
         {
-          //  if (folderPathLabel.Text != "" && folderPath != "")
-          //  {
-          //      return folderPathLabel.Text + folderPath;
-          //  }
-          //  else
-          //  {
-          //      return folderPathLabel.Text;
-          //  }
+            if (folderPathLabel.Text != "" && folderPath != "")
+            {
+                File.Create(fileTextBox.Text);
+            }
+            else if (folderPathLabel.Text == "")
+            {
+                
+            }
+            else if (fileName == "")
+            {
+
+            }
         }
     }
 }

@@ -133,6 +133,11 @@ namespace TheNoteTakingApp__Windows_Forms_
             // }
         }
 
+        public void ExportToJson()
+        {
+
+        }
+
         public void ChangePath(string newPath)
         {
             path = newPath;  

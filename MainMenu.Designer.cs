@@ -146,15 +146,16 @@
             // exportToTextToolStripMenuItem
             // 
             exportToTextToolStripMenuItem.Name = "exportToTextToolStripMenuItem";
-            exportToTextToolStripMenuItem.Size = new Size(185, 26);
+            exportToTextToolStripMenuItem.Size = new Size(224, 26);
             exportToTextToolStripMenuItem.Text = "Export to Text";
             exportToTextToolStripMenuItem.Click += exportToTextToolStripMenuItem_Click;
             // 
             // toJsonToolStripMenuItem
             // 
             toJsonToolStripMenuItem.Name = "toJsonToolStripMenuItem";
-            toJsonToolStripMenuItem.Size = new Size(185, 26);
+            toJsonToolStripMenuItem.Size = new Size(224, 26);
             toJsonToolStripMenuItem.Text = "Export to Json";
+            toJsonToolStripMenuItem.Click += toJsonToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
