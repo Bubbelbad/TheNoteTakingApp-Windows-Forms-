@@ -44,6 +44,7 @@ namespace TheNoteTakingApp__Windows_Forms_
             Load();
         }
 
+
         //Save the most recent created note in CSV
         public void SaveRecentNote()
         {
@@ -116,21 +117,6 @@ namespace TheNoteTakingApp__Windows_Forms_
                     sw.WriteLine(note.GetText());
                 }
             }
-            // Console.WriteLine("Name your file");
-            // string fileName = Console.ReadLine();
-            // string fileName = "newTest.txt";
-            //            // if (!File.Exists(fileName))
-            // {
-            //     var myFile = File.Create(fileName);
-            //     myFile.Close();
-            // }
-            //            // using (StreamWriter writer = new StreamWriter(fileName))
-            // {
-            //     foreach (Note textnote in listOfNotes)
-            //     {
-            //         writer.WriteLine(textnote.GetText);
-            //     }
-            // }
         }
 
         public void ExportToJson()

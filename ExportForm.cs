@@ -14,19 +14,26 @@ namespace TheNoteTakingApp__Windows_Forms_
     public partial class ExportForm : Form
     {
 
-        string folderPath;
+        string filePath;
         string fileName;
+        NoteManager noteManager;
 
         public ExportForm()
         {
             InitializeComponent();
         }
 
-        public string FileInput()
+        public void SetManager(NoteManager noteManager1)
         {
-            fileName = fileTextBox.Text;
-            return "hihi";
+            noteManager = noteManager1;
         }
+
+
+        public void FileInput()
+        {
+            fileName = fileTextBox.Text + ".txt";
+        }
+
 
         private void folderButton_Click(object sender, EventArgs e)
         {
@@ -36,17 +43,25 @@ namespace TheNoteTakingApp__Windows_Forms_
 
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
-                    folderPath = fbd.SelectedPath;
-                    folderPathLabel.Text = folderPath.ToString();
+                    filePath = fbd.SelectedPath;
+                    folderPathLabel.Text = filePath.ToString();
+                    FileInput();
                 }
             }
         }
 
         private void exportButton_Click(object sender, EventArgs e)
         {
-            if (folderPathLabel.Text != "" && folderPath != "")
+            //Now this function actually creates a File in the bin... But not where I want to!
+            //Anyway, how do I get the noteManager in here so that I can call .ExportToText();?
+            if (folderPathLabel.Text != "" && filePath != "")
             {
-                File.Create(fileTextBox.Text);
+                File.Create(fileName).Close();
+                using (StreamWriter sw = new StreamWriter(fileName))
+                {
+                    //Here now...how do I connect it? 
+                }
+                
             }
             else if (folderPathLabel.Text == "")
             {
