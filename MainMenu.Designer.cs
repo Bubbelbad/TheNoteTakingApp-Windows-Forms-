@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            headerLabel = new Label();
             homeBtn = new Button();
             viewBtn = new Button();
             createBtn = new Button();
@@ -50,19 +49,9 @@
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // headerLabel
-            // 
-            headerLabel.AutoSize = true;
-            headerLabel.Font = new Font("Papyrus", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            headerLabel.Location = new Point(225, 33);
-            headerLabel.Name = "headerLabel";
-            headerLabel.Size = new Size(318, 46);
-            headerLabel.TabIndex = 0;
-            headerLabel.Text = "The Note Taking App";
-            // 
             // homeBtn
             // 
-            homeBtn.Location = new Point(12, 80);
+            homeBtn.Location = new Point(10, 104);
             homeBtn.Name = "homeBtn";
             homeBtn.Size = new Size(75, 23);
             homeBtn.TabIndex = 1;
@@ -72,7 +61,7 @@
             // 
             // viewBtn
             // 
-            viewBtn.Location = new Point(12, 109);
+            viewBtn.Location = new Point(10, 133);
             viewBtn.Name = "viewBtn";
             viewBtn.Size = new Size(75, 23);
             viewBtn.TabIndex = 2;
@@ -82,7 +71,7 @@
             // 
             // createBtn
             // 
-            createBtn.Location = new Point(12, 138);
+            createBtn.Location = new Point(10, 162);
             createBtn.Name = "createBtn";
             createBtn.Size = new Size(75, 23);
             createBtn.TabIndex = 3;
@@ -96,7 +85,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(761, 24);
+            menuStrip1.Size = new Size(914, 24);
             menuStrip1.TabIndex = 5;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -110,7 +99,7 @@
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(180, 22);
+            openToolStripMenuItem.Size = new Size(137, 22);
             openToolStripMenuItem.Text = "&Open...(csv)";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
@@ -118,7 +107,7 @@
             // 
             exportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exportToTextToolStripMenuItem, toJsonToolStripMenuItem });
             exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            exportToolStripMenuItem.Size = new Size(180, 22);
+            exportToolStripMenuItem.Size = new Size(137, 22);
             exportToolStripMenuItem.Text = "&Export";
             // 
             // exportToTextToolStripMenuItem
@@ -138,7 +127,7 @@
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(137, 22);
             exitToolStripMenuItem.Text = "E&xit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -152,7 +141,7 @@
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(180, 22);
+            aboutToolStripMenuItem.Size = new Size(107, 22);
             aboutToolStripMenuItem.Text = "&About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
@@ -160,9 +149,9 @@
             // 
             statusStrip1.ImageScalingSize = new Size(20, 20);
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
-            statusStrip1.Location = new Point(0, 435);
+            statusStrip1.Location = new Point(0, 509);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(761, 22);
+            statusStrip1.Size = new Size(914, 22);
             statusStrip1.TabIndex = 7;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -174,42 +163,41 @@
             // 
             // createPanel1
             // 
-            createPanel1.Location = new Point(93, 80);
+            createPanel1.Location = new Point(91, 64);
             createPanel1.Margin = new Padding(3, 4, 3, 4);
             createPanel1.Name = "createPanel1";
-            createPanel1.Size = new Size(656, 344);
+            createPanel1.Size = new Size(752, 422);
             createPanel1.TabIndex = 8;
             // 
             // homePanel1
             // 
-            homePanel1.Location = new Point(93, 80);
+            homePanel1.Location = new Point(91, 64);
             homePanel1.Margin = new Padding(3, 4, 3, 4);
             homePanel1.Name = "homePanel1";
-            homePanel1.Size = new Size(656, 344);
+            homePanel1.Size = new Size(712, 454);
             homePanel1.TabIndex = 10;
             // 
             // viewPanel1
             // 
-            viewPanel1.Location = new Point(93, 80);
+            viewPanel1.Location = new Point(91, 64);
             viewPanel1.Margin = new Padding(3, 4, 3, 4);
             viewPanel1.Name = "viewPanel1";
-            viewPanel1.Size = new Size(656, 344);
+            viewPanel1.Size = new Size(732, 422);
             viewPanel1.TabIndex = 11;
             // 
             // MainMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(761, 457);
-            Controls.Add(viewPanel1);
-            Controls.Add(homePanel1);
-            Controls.Add(createPanel1);
+            ClientSize = new Size(914, 531);
             Controls.Add(statusStrip1);
             Controls.Add(createBtn);
             Controls.Add(viewBtn);
             Controls.Add(homeBtn);
-            Controls.Add(headerLabel);
             Controls.Add(menuStrip1);
+            Controls.Add(viewPanel1);
+            Controls.Add(homePanel1);
+            Controls.Add(createPanel1);
             MainMenuStrip = menuStrip1;
             Name = "MainMenu";
             Text = "Form1";
@@ -223,8 +211,6 @@
         }
 
         #endregion
-
-        private Label headerLabel;
         private Button homeBtn;
         private Button viewBtn;
         private Button createBtn;

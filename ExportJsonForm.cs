@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,10 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace TheNoteTakingApp__Windows_Forms_
 {
-    public partial class ExportJsonForm : Form
+    public partial class ExportJsonForm : MaterialForm
     {
         string filePath;
         string fileName;
@@ -20,6 +23,13 @@ namespace TheNoteTakingApp__Windows_Forms_
         public ExportJsonForm()
         {
             InitializeComponent();
+
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Amber700, Primary.Amber900, Primary.Amber500, Accent.Amber400, TextShade.BLACK);
+            this.Text = "The Note Taking App";
+            this.Top = 0;
         }
 
 

@@ -41,7 +41,7 @@
             // 
             // exportButton
             // 
-            exportButton.Location = new Point(35, 161);
+            exportButton.Location = new Point(52, 234);
             exportButton.Name = "exportButton";
             exportButton.Size = new Size(75, 23);
             exportButton.TabIndex = 0;
@@ -52,7 +52,7 @@
             // nameFileLabel
             // 
             nameFileLabel.AutoSize = true;
-            nameFileLabel.Location = new Point(35, 22);
+            nameFileLabel.Location = new Point(52, 95);
             nameFileLabel.Name = "nameFileLabel";
             nameFileLabel.Size = new Size(81, 15);
             nameFileLabel.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             // fileTextBox
             // 
-            fileTextBox.Location = new Point(35, 40);
+            fileTextBox.Location = new Point(52, 113);
             fileTextBox.Name = "fileTextBox";
             fileTextBox.Size = new Size(148, 23);
             fileTextBox.TabIndex = 2;
@@ -68,7 +68,7 @@
             // chooseFolderLabel
             // 
             chooseFolderLabel.AutoSize = true;
-            chooseFolderLabel.Location = new Point(228, 22);
+            chooseFolderLabel.Location = new Point(245, 95);
             chooseFolderLabel.Name = "chooseFolderLabel";
             chooseFolderLabel.Size = new Size(87, 15);
             chooseFolderLabel.TabIndex = 3;
@@ -76,7 +76,7 @@
             // 
             // folderButton
             // 
-            folderButton.Location = new Point(228, 40);
+            folderButton.Location = new Point(245, 113);
             folderButton.Name = "folderButton";
             folderButton.Size = new Size(75, 23);
             folderButton.TabIndex = 4;
@@ -87,7 +87,7 @@
             // folderPathLabel1
             // 
             folderPathLabel1.AutoSize = true;
-            folderPathLabel1.Location = new Point(35, 104);
+            folderPathLabel1.Location = new Point(52, 177);
             folderPathLabel1.Name = "folderPathLabel1";
             folderPathLabel1.Size = new Size(93, 15);
             folderPathLabel1.TabIndex = 5;
@@ -96,7 +96,7 @@
             // folderPathLabel
             // 
             folderPathLabel.AutoSize = true;
-            folderPathLabel.Location = new Point(35, 129);
+            folderPathLabel.Location = new Point(52, 202);
             folderPathLabel.Name = "folderPathLabel";
             folderPathLabel.Size = new Size(0, 15);
             folderPathLabel.TabIndex = 6;
@@ -105,7 +105,7 @@
             // 
             fileErrorLabel.AutoSize = true;
             fileErrorLabel.ForeColor = Color.Firebrick;
-            fileErrorLabel.Location = new Point(35, 66);
+            fileErrorLabel.Location = new Point(52, 139);
             fileErrorLabel.Name = "fileErrorLabel";
             fileErrorLabel.Size = new Size(0, 15);
             fileErrorLabel.TabIndex = 7;
@@ -115,7 +115,7 @@
             // 
             directoryErrorLabel.AutoSize = true;
             directoryErrorLabel.ForeColor = Color.Firebrick;
-            directoryErrorLabel.Location = new Point(228, 66);
+            directoryErrorLabel.Location = new Point(245, 139);
             directoryErrorLabel.Name = "directoryErrorLabel";
             directoryErrorLabel.Size = new Size(0, 15);
             directoryErrorLabel.TabIndex = 8;
@@ -125,7 +125,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(448, 226);
+            ClientSize = new Size(437, 290);
             Controls.Add(directoryErrorLabel);
             Controls.Add(fileErrorLabel);
             Controls.Add(folderPathLabel);

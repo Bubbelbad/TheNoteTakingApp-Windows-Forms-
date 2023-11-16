@@ -65,7 +65,7 @@ namespace TheNoteTakingApp__Windows_Forms_
 
             authorTextBox.Clear();
             titleTextBox.Clear();
-            categoryLabel.ResetText();
+            categoryComboBox.SelectedIndex = -1;
             messageTextBox.Clear();
             secretCheckBox.Checked = false;
         }

@@ -1,8 +1,10 @@
 using System.Text.Json;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace TheNoteTakingApp__Windows_Forms_
 {
-    public partial class MainMenu : Form
+    public partial class MainMenu : MaterialForm
     {
 
         NoteManager noteManager1;
@@ -10,15 +12,24 @@ namespace TheNoteTakingApp__Windows_Forms_
         public MainMenu()
         {
             InitializeComponent();
+
+
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Amber700, Primary.Amber900, Primary.Amber500, Accent.Amber400, TextShade.BLACK);
+            this.Text = "The Note Taking App";
+            this.Top = 0;
         }
 
+        MaterialSkinManager themeManager = MaterialSkinManager.Instance;
 
         private void Form1_Load(object sender, EventArgs e)
         {
             NoteManager noteManager = new NoteManager();
             noteManager1 = noteManager;
             noteManager.Load();
-
 
             toolStripStatusLabel1.Text = "Ready";
             createPanel1.ImportToolStrip(toolStripStatusLabel1);

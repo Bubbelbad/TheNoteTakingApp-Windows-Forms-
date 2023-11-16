@@ -82,14 +82,6 @@ namespace TheNoteTakingApp__Windows_Forms_
         }
 
 
-        //Load function - Här ska man kunna hämta filer med olika note-objekt.
-        //I nuläget tar den bara in från CSV-filen via NoetManager.Load.
-        private void refreshBtn_Click(object sender, EventArgs e)
-        {
-            NoteManager.Load();
-            RefreshListBox();
-        }
-
 
         //Tar bort markerad Note från lista, box och CSV.
         private void deleteBtn_Click(object sender, EventArgs e)
