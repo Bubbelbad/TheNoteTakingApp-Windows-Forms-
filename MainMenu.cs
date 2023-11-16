@@ -23,7 +23,6 @@ namespace TheNoteTakingApp__Windows_Forms_
         }
 
 
-
         private void Form1_Load(object sender, EventArgs e)
         {
             NoteManager noteManager = new NoteManager();
@@ -79,14 +78,13 @@ namespace TheNoteTakingApp__Windows_Forms_
         }
 
 
-        //Exit program through toolstrip file menu
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Environment.Exit(0);
         }
 
 
-        //To open new CSV-file
+        //To open another already existing CSV-file
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();

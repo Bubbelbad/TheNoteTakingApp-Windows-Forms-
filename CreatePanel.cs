@@ -12,8 +12,8 @@ namespace TheNoteTakingApp__Windows_Forms_
 {
     public partial class CreatePanel : UserControl
     {
-        NoteManager NoteManager = null;
-        ToolStripStatusLabel ToolStripStatusLabel1 = null;
+        NoteManager NoteManager;
+        ToolStripStatusLabel ToolStripStatusLabel1;
         public bool edit = false;
         public int editId;
 
@@ -47,7 +47,7 @@ namespace TheNoteTakingApp__Windows_Forms_
             string title = titleTextBox.Text;
             string category = categoryComboBox.Text;
             string message = messageTextBox.Text;
-            message = message.Replace(",", "|");
+            message = message.Replace(",", "|"); //Replacing commas and new lines to be able to save as CSV
             message = message.Replace("\r\n", "#");
             bool secret = false;
             if (secretCheckBox.Checked)
@@ -67,13 +67,13 @@ namespace TheNoteTakingApp__Windows_Forms_
             }
 
             ToolStripStatusLabel1.Text = "Success!";
-
             authorTextBox.Clear();
             titleTextBox.Clear();
             categoryComboBox.SelectedIndex = -1;
             messageTextBox.Clear();
             secretCheckBox.Checked = false;
         }
+
 
         public void EditNote(Note note)
         {
@@ -83,6 +83,7 @@ namespace TheNoteTakingApp__Windows_Forms_
             categoryComboBox.Text = note.Category;
             messageTextBox.Text = note.Message;
             editId = note.Id;
+
             if (note.Secret)
             {
                 secretCheckBox.Checked = true;

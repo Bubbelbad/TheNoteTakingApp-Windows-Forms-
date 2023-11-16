@@ -23,7 +23,6 @@ namespace TheNoteTakingApp__Windows_Forms_
         public static int nextId = 1;
 
 
-
         public Note(string author, string title, string category, bool secret, string message)
         {
             this.Id = nextId++;
