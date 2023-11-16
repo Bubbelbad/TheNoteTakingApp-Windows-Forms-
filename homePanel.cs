@@ -12,11 +12,25 @@ namespace TheNoteTakingApp__Windows_Forms_
 {
     public partial class homePanel : UserControl
     {
+        ToolStripStatusLabel statusLabel;
         public homePanel()
         {
             InitializeComponent();
             label1.Text = text1;
         }
+
+
+        public void ImportToolStrip(ToolStripStatusLabel toolStripStatusLabel1)
+        {
+            this.statusLabel = toolStripStatusLabel1;
+        }
+
+
+        public void SetStatusLabel()
+        {
+            statusLabel.Text = "home page";
+        }
+
 
         string text1 = "This is a Note Taking App made as a school assignment. \n\n" +
                        "It was a great way to use file handling and getting into \ngraphic design.\n" +
@@ -27,6 +41,7 @@ namespace TheNoteTakingApp__Windows_Forms_
                        "Make sure to check out the tool strip menu:  \n\n" +
                        "• Open - lets the user open other CSV-files in the library\n" +
                        "• Export - gives you the possibility to export the current \n  open file to text or json\n";
+        
 
 
     }

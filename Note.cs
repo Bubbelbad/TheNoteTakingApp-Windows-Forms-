@@ -20,7 +20,6 @@ namespace TheNoteTakingApp__Windows_Forms_
         public bool Secret { get; set; }
         public int Id { get; set; }
 
-
         public static int nextId = 1;
 
 
@@ -35,12 +34,14 @@ namespace TheNoteTakingApp__Windows_Forms_
             this.Message = message;
         }
 
+
         public string GetCSV()
         {
             Message = Message.Replace(",", "|");
             Message = Message.Replace("\r\n", "#");
             return Id + "," + Author + "," + Title + "," + Category + "," + Secret + "," + Message;
         }
+
 
         public string GetText()
         {
@@ -52,8 +53,8 @@ namespace TheNoteTakingApp__Windows_Forms_
                    $"Secret: {Secret} \n\n" +
                    $"Message: \n{Message}\n\n" +
                    "-----------\n\n";
-
         }
+
 
         public string GetJson()
         {

@@ -32,6 +32,8 @@ namespace TheNoteTakingApp__Windows_Forms_
 
             toolStripStatusLabel1.Text = "Ready";
             createPanel1.ImportToolStrip(toolStripStatusLabel1);
+            viewPanel1.ImportToolStrip(toolStripStatusLabel1);
+            homePanel1.ImportToolStrip(toolStripStatusLabel1);
             homePanel1.Visible = true;
             createPanel1.Visible = false;
             viewPanel1.Visible = false;
@@ -46,6 +48,7 @@ namespace TheNoteTakingApp__Windows_Forms_
             homePanel1.Visible = true;
             createPanel1.Visible = false;
             viewPanel1.Visible = false;
+            homePanel1.SetStatusLabel();
         }
 
 
@@ -55,8 +58,8 @@ namespace TheNoteTakingApp__Windows_Forms_
             homePanel1.Visible = false;
             createPanel1.Visible = false;
             viewPanel1.Visible = true;
-            viewPanel1.RefreshListBox(); //Gör så att ListBox blir refreshad varje gång jag går in i ViewPanel
-
+            viewPanel1.RefreshListBox();
+            viewPanel1.SetStatusLabel();
         }
 
 
@@ -66,7 +69,7 @@ namespace TheNoteTakingApp__Windows_Forms_
             homePanel1.Visible = false;
             createPanel1.Visible = true;
             viewPanel1.Visible = false;
-
+            createPanel1.SetStatusLabel();
         }
 
 
