@@ -14,4 +14,4 @@ It should be a very simple design that allows you to create messages and save au
 - To use both panels and pop-up windows.
 - Being able to choose location where to save the .txt and .json files
 
-![Preview](https://github.com/Bubbelbad/TheNoteTakingApp-WindowsForms/blob/master/Screenshot%20ViewPanel.png?raw=true)
+![Preview](https://github.com/Bubbelbad/TheNoteTakingApp-WindowsForms/blob/master/Screenshot%20Viewpage.png?raw=true)
