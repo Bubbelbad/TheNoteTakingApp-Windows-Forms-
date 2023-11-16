@@ -16,33 +16,25 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         string filePath;
         string fileName;
-        bool textOrJsonBoolean;
         NoteManager noteManager;
+
 
         public ExportForm()
         {
             InitializeComponent();
         }
 
-        public void SetManager(NoteManager noteManager1, bool textOrJson)
+
+        public void SetManager(NoteManager noteManager1)
         {
             noteManager = noteManager1;
-            textOrJsonBoolean = textOrJson;
         }
 
 
-        public string FileInput()
+        public string AddFileEnding()
         {
-            if (textOrJsonBoolean)
-            {
-                fileName = fileTextBox.Text + ".txt";
-                return fileName;
-            }
-            else
-            {
-                fileName = fileTextBox.Text + ".json";
-                return fileName;
-            }
+            fileName = fileTextBox.Text + ".txt";
+            return fileName;
         }
 
 
@@ -57,12 +49,13 @@ namespace TheNoteTakingApp__Windows_Forms_
                 {
                     filePath = fbd.SelectedPath;
                     folderPathLabel.Text = filePath.ToString();
-                    FileInput();
+                    AddFileEnding();
                 }
             }
         }
 
 
+        //Making sure all the info is there before calling noteManager.ExportToText()
         private void exportButton_Click(object sender, EventArgs e)
         {
             if (folderPathLabel.Text != "" && filePath != "" && fileTextBox.Text != "")
@@ -73,7 +66,6 @@ namespace TheNoteTakingApp__Windows_Forms_
                     MessageBox.Show("Not a valid file name or folder path - try again");
                     fileTextBox.Text = "";
                     folderPathLabel.Text = "";
-                    
                 }
                 else
                 {

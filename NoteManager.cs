@@ -14,12 +14,14 @@ namespace TheNoteTakingApp__Windows_Forms_
         public List<Note> listOfNotes = new List<Note>();
         public static string path = "notes.csv";
 
+
         public void CreateNote (string author, string title, string category, bool secret, string message)
         {
             listOfNotes.Add(new Note(author, title, category, secret, message));
         }
 
 
+        //Sending the info to CreatePanel, to edit and save the edited note
         public void ReplaceEditedNote(int editId, string author, string title, string category, bool secret, string message)
         {
             foreach (Note note in listOfNotes)
@@ -55,7 +57,6 @@ namespace TheNoteTakingApp__Windows_Forms_
         }
 
 
-
         //To load all notes from CSV-file
         public void Load()
         {
@@ -73,7 +74,7 @@ namespace TheNoteTakingApp__Windows_Forms_
                         string category = strings[3];
                         bool secret = Convert.ToBoolean(strings[4]);
                         string message = strings[5];
-                        message.Replace("|", ","); //Here I convert back the symbols from the CSV that I changed. 
+                        message.Replace("|", ","); //Here I convert back the symbols from the CSV that I changed, so the reading is correct.
                         message.Replace("#,", "\r\n");
 
                         Note note = new Note(author, title, category, secret, message);
@@ -88,7 +89,6 @@ namespace TheNoteTakingApp__Windows_Forms_
                 }
             }
         }
-
 
 
         public void DeleteNoteCSV(int index)
@@ -106,6 +106,7 @@ namespace TheNoteTakingApp__Windows_Forms_
         }
 
 
+        //Exporting opened file to chosen directory
         public bool ExportToText(string fileName, string location)
         {
             string file = System.IO.Path.Combine(location, fileName);
@@ -127,6 +128,8 @@ namespace TheNoteTakingApp__Windows_Forms_
             }
         }
 
+
+        //Exporting chosen file to json
         public bool ExportToJson(string fileName, string location)
         {
             string file = System.IO.Path.Combine(location, fileName);
@@ -148,6 +151,8 @@ namespace TheNoteTakingApp__Windows_Forms_
             }
         }
 
+
+        //Changing path to read and save the new chosen CSV-file
         public void ChangePath(string newPath)
         {
             path = newPath;  
