@@ -144,8 +144,8 @@ namespace TheNoteTakingApp__Windows_Forms_
         private void exportToTextToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExportForm exportForm = new ExportForm();
+            exportForm.SetManager(noteManager1, true);
             exportForm.ShowDialog();
-            noteManager1.ExportToText();
         }
 
         private void toJsonToolStripMenuItem_Click(object sender, EventArgs e)

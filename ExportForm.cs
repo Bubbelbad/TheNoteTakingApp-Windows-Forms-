@@ -16,6 +16,7 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         string filePath;
         string fileName;
+        bool textOrJsonBoolean;
         NoteManager noteManager;
 
         public ExportForm()
@@ -23,15 +24,25 @@ namespace TheNoteTakingApp__Windows_Forms_
             InitializeComponent();
         }
 
-        public void SetManager(NoteManager noteManager1)
+        public void SetManager(NoteManager noteManager1, bool textOrJson)
         {
             noteManager = noteManager1;
+            textOrJsonBoolean = textOrJson;
         }
 
 
-        public void FileInput()
+        public string FileInput()
         {
-            fileName = fileTextBox.Text + ".txt";
+            if (textOrJsonBoolean)
+            {
+                fileName = fileTextBox.Text + ".txt";
+                return fileName;
+            }
+            else
+            {
+                fileName = fileTextBox.Text + ".json";
+                return fileName;
+            }
         }
 
 
@@ -52,25 +63,20 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         private void exportButton_Click(object sender, EventArgs e)
         {
-            //Now this function actually creates a File in the bin... But not where I want to!
-            //Anyway, how do I get the noteManager in here so that I can call .ExportToText();?
             if (folderPathLabel.Text != "" && filePath != "")
             {
-                File.Create(fileName).Close();
-                using (StreamWriter sw = new StreamWriter(fileName))
-                {
-                    //Here now...how do I connect it? 
-                }
-                
+
+                noteManager.ExportToText(fileName, filePath);
             }
             else if (folderPathLabel.Text == "")
             {
-                
+
             }
             else if (fileName == "")
             {
 
             }
+            Close();
         }
     }
 }

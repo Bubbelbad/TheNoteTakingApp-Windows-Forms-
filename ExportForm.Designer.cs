@@ -35,6 +35,7 @@
             folderButton = new Button();
             folderPathLabel1 = new Label();
             folderPathLabel = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // exportButton
@@ -99,11 +100,21 @@
             folderPathLabel.Size = new Size(0, 15);
             folderPathLabel.TabIndex = 6;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(35, 69);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 7;
+            label1.Text = "label1";
+            // 
             // ExportForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(448, 226);
+            Controls.Add(label1);
             Controls.Add(folderPathLabel);
             Controls.Add(folderPathLabel1);
             Controls.Add(folderButton);
@@ -126,5 +137,6 @@
         private Button folderButton;
         private Label folderPathLabel1;
         private Label folderPathLabel;
+        private Label label1;
     }
 }

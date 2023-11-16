@@ -106,11 +106,11 @@ namespace TheNoteTakingApp__Windows_Forms_
         }
 
 
-        public void ExportToText()
+        public void ExportToText(string fileName, string location)
         {
-            string fileName = "newTest.txt";
-            File.Create(fileName).Close(); //Erasing all the previous text in path
-            using (StreamWriter sw = new StreamWriter(fileName)) //Rewriting with the edited note updated.
+            string file = System.IO.Path.Combine(location, fileName);
+            System.IO.File.Create(file).Close();
+            using (StreamWriter sw = new StreamWriter(file)) //Rewriting with the edited note updated.
             {
                 foreach (Note note in listOfNotes)
                 {
