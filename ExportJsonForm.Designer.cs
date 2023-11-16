@@ -35,6 +35,7 @@
             fileTextBox = new TextBox();
             nameFileLabel = new Label();
             exportButton = new Button();
+            directoryErrorLabel = new Label();
             SuspendLayout();
             // 
             // folderPathLabel
@@ -97,11 +98,20 @@
             exportButton.Text = "Export";
             exportButton.UseVisualStyleBackColor = false;
             // 
+            // directoryErrorLabel
+            // 
+            directoryErrorLabel.AutoSize = true;
+            directoryErrorLabel.Location = new Point(220, 62);
+            directoryErrorLabel.Name = "directoryErrorLabel";
+            directoryErrorLabel.Size = new Size(0, 15);
+            directoryErrorLabel.TabIndex = 14;
+            // 
             // ExportJsonForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(447, 222);
+            Controls.Add(directoryErrorLabel);
             Controls.Add(folderPathLabel);
             Controls.Add(folderPathLabel1);
             Controls.Add(folderButton);
@@ -111,6 +121,7 @@
             Controls.Add(exportButton);
             Name = "ExportJsonForm";
             Text = "ExportJsonForm";
+            Load += ExportJsonForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -124,5 +135,6 @@
         private TextBox fileTextBox;
         private Label nameFileLabel;
         private Button exportButton;
+        private Label directoryErrorLabel;
     }
 }

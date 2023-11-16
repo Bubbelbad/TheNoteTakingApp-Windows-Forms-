@@ -35,7 +35,8 @@
             folderButton = new Button();
             folderPathLabel1 = new Label();
             folderPathLabel = new Label();
-            label1 = new Label();
+            fileErrorLabel = new Label();
+            directoryErrorLabel = new Label();
             SuspendLayout();
             // 
             // exportButton
@@ -100,21 +101,33 @@
             folderPathLabel.Size = new Size(0, 15);
             folderPathLabel.TabIndex = 6;
             // 
-            // label1
+            // fileErrorLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(35, 69);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 7;
-            label1.Text = "label1";
+            fileErrorLabel.AutoSize = true;
+            fileErrorLabel.ForeColor = Color.Firebrick;
+            fileErrorLabel.Location = new Point(35, 66);
+            fileErrorLabel.Name = "fileErrorLabel";
+            fileErrorLabel.Size = new Size(0, 15);
+            fileErrorLabel.TabIndex = 7;
+            fileErrorLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // directoryErrorLabel
+            // 
+            directoryErrorLabel.AutoSize = true;
+            directoryErrorLabel.ForeColor = Color.Firebrick;
+            directoryErrorLabel.Location = new Point(228, 66);
+            directoryErrorLabel.Name = "directoryErrorLabel";
+            directoryErrorLabel.Size = new Size(0, 15);
+            directoryErrorLabel.TabIndex = 8;
+            directoryErrorLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ExportForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(448, 226);
-            Controls.Add(label1);
+            Controls.Add(directoryErrorLabel);
+            Controls.Add(fileErrorLabel);
             Controls.Add(folderPathLabel);
             Controls.Add(folderPathLabel1);
             Controls.Add(folderButton);
@@ -137,6 +150,7 @@
         private Button folderButton;
         private Label folderPathLabel1;
         private Label folderPathLabel;
-        private Label label1;
+        private Label fileErrorLabel;
+        private Label directoryErrorLabel;
     }
 }

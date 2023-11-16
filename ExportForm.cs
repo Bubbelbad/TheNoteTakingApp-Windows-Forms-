@@ -46,6 +46,7 @@ namespace TheNoteTakingApp__Windows_Forms_
         }
 
 
+        //To choose dialog window - choosing directory for file
         private void folderButton_Click(object sender, EventArgs e)
         {
             using (var fbd = new FolderBrowserDialog())
@@ -61,22 +62,32 @@ namespace TheNoteTakingApp__Windows_Forms_
             }
         }
 
+
         private void exportButton_Click(object sender, EventArgs e)
         {
-            if (folderPathLabel.Text != "" && filePath != "")
+            if (folderPathLabel.Text != "" && filePath != "" && fileTextBox.Text != "")
             {
-
-                noteManager.ExportToText(fileName, filePath);
+                bool status = noteManager.ExportToText(fileName, filePath);
+                if (!status)
+                {
+                    MessageBox.Show("Not a valid file name or folder path - try again");
+                    fileTextBox.Text = "";
+                    folderPathLabel.Text = "";
+                    
+                }
+                else
+                {
+                    Close();
+                }
+            }
+            else if (fileTextBox.Text == "")
+            {
+                fileErrorLabel.Text = "Write a file name";
             }
             else if (folderPathLabel.Text == "")
             {
-
+                directoryErrorLabel.Text = "Choose directory";
             }
-            else if (fileName == "")
-            {
-
-            }
-            Close();
         }
     }
 }
