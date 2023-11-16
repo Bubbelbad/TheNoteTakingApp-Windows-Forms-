@@ -127,9 +127,25 @@ namespace TheNoteTakingApp__Windows_Forms_
             }
         }
 
-        public void ExportToJson()
+        public bool ExportToJson(string fileName, string location)
         {
-
+            string file = System.IO.Path.Combine(location, fileName);
+            try
+            {
+                System.IO.File.Create(file).Close();
+                using (StreamWriter sw = new StreamWriter(file)) //Rewriting with the edited note updated.
+                {
+                    foreach (Note note in listOfNotes)
+                    {
+                        sw.WriteLine(note.GetJson());
+                    }
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public void ChangePath(string newPath)

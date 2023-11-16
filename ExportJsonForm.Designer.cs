@@ -36,6 +36,7 @@
             nameFileLabel = new Label();
             exportButton = new Button();
             directoryErrorLabel = new Label();
+            fileErrorLabel = new Label();
             SuspendLayout();
             // 
             // folderPathLabel
@@ -63,6 +64,7 @@
             folderButton.TabIndex = 11;
             folderButton.Text = "Folder";
             folderButton.UseVisualStyleBackColor = false;
+            folderButton.Click += folderButton_Click_1;
             // 
             // chooseFolderLabel
             // 
@@ -97,20 +99,32 @@
             exportButton.TabIndex = 7;
             exportButton.Text = "Export";
             exportButton.UseVisualStyleBackColor = false;
+            exportButton.Click += exportButton_Click;
             // 
             // directoryErrorLabel
             // 
             directoryErrorLabel.AutoSize = true;
+            directoryErrorLabel.ForeColor = Color.Firebrick;
             directoryErrorLabel.Location = new Point(220, 62);
             directoryErrorLabel.Name = "directoryErrorLabel";
             directoryErrorLabel.Size = new Size(0, 15);
             directoryErrorLabel.TabIndex = 14;
+            // 
+            // fileErrorLabel
+            // 
+            fileErrorLabel.AutoSize = true;
+            fileErrorLabel.ForeColor = Color.Firebrick;
+            fileErrorLabel.Location = new Point(25, 63);
+            fileErrorLabel.Name = "fileErrorLabel";
+            fileErrorLabel.Size = new Size(0, 15);
+            fileErrorLabel.TabIndex = 15;
             // 
             // ExportJsonForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(447, 222);
+            Controls.Add(fileErrorLabel);
             Controls.Add(directoryErrorLabel);
             Controls.Add(folderPathLabel);
             Controls.Add(folderPathLabel1);
@@ -121,7 +135,6 @@
             Controls.Add(exportButton);
             Name = "ExportJsonForm";
             Text = "ExportJsonForm";
-            Load += ExportJsonForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -136,5 +149,6 @@
         private Label nameFileLabel;
         private Button exportButton;
         private Label directoryErrorLabel;
+        private Label fileErrorLabel;
     }
 }

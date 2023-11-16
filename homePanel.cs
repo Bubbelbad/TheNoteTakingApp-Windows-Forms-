@@ -19,10 +19,10 @@ namespace TheNoteTakingApp__Windows_Forms_
         }
 
         string text1 = "This is a Note Taking App made for a school assignment. \n\n" +
-                       "There are a few things besides the obvious that you can do: \n\n" +
-                       "- Under the tab File -> Open, you can open other CSV-files\n" +
-                       "- Export gives you the possibility to export the current file to text or json\n" +
-                       "- Tools menu gives you the option to change the theme (bit basic tho)\n";
+                       "Make sure to check out the tool strip menu:  \n\n" +
+                       "• Open - lets the user open other CSV-files in the library\n" +
+                       "• Export - gives you the possibility to export the current \n  open file to text or json\n" +
+                       "• Change theme - gives you the option to change the theme \n  (at least the background)\n";
 
 
     }

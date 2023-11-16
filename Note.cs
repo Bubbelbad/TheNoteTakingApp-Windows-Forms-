@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Net.Sockets;
+using System.Windows.Forms;
+
 
 namespace TheNoteTakingApp__Windows_Forms_
 {
@@ -52,10 +57,8 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         public string GetJson()
         {
-            return "this will be json file";
+            string jsonString = JsonSerializer.Serialize(this);
+            return jsonString;
         }
-
-
-
     }
 }
