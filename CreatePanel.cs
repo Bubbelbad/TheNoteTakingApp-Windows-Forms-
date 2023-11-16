@@ -34,6 +34,11 @@ namespace TheNoteTakingApp__Windows_Forms_
             this.ToolStripStatusLabel1 = toolStripStatusLabel1;
         }
 
+        public void SetStatusLabel()
+        {
+            ToolStripStatusLabel1.Text = "create page";
+        }
+
 
         //Function to save the current written note: 
         private void button1_Click(object sender, EventArgs e)

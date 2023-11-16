@@ -20,7 +20,6 @@ namespace TheNoteTakingApp__Windows_Forms_
         public ViewPanel()
         {
             InitializeComponent();
-
         }
 
 
@@ -40,11 +39,31 @@ namespace TheNoteTakingApp__Windows_Forms_
             this.CreatePanel = createPanel;
         }
 
+        
+        public void SetStatusLabel()
+        {
+            ToolStripStatusLabel1.Text = "view page";
+        }
+
+
+        public void ImportToolStrip(ToolStripStatusLabel toolStripStatusLabel1)
+        {
+            this.ToolStripStatusLabel1 = toolStripStatusLabel1;
+        }
 
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = availableListBox.SelectedIndex;
+            try
+            {
+                ToolStripStatusLabel1.Text = NoteManager.listOfNotes[index].Category.ToLower();
+            }
+            catch
+            {
+                ToolStripStatusLabel1.Text = "";
+            }
+
             if (index > -1)
             {
                 Note note = NoteManager.listOfNotes[index];
@@ -57,7 +76,6 @@ namespace TheNoteTakingApp__Windows_Forms_
                 messageTextBox.Text = note.Message;
             }
         }
-
 
 
         public void RefreshListBox()
@@ -82,8 +100,7 @@ namespace TheNoteTakingApp__Windows_Forms_
         }
 
 
-
-        //Tar bort markerad Note från lista, box och CSV.
+        //Removes selected note from file, list and listBox
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             int index = availableListBox.SelectedIndex;
@@ -98,6 +115,7 @@ namespace TheNoteTakingApp__Windows_Forms_
                 category2.Text = "";
                 messageTextBox.Clear();
             }
+            ToolStripStatusLabel1.Text = "Note successfully deleted";
         }
 
 
