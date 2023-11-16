@@ -195,9 +195,9 @@
             Controls.Add(viewBtn);
             Controls.Add(homeBtn);
             Controls.Add(menuStrip1);
-            Controls.Add(viewPanel1);
             Controls.Add(homePanel1);
             Controls.Add(createPanel1);
+            Controls.Add(viewPanel1);
             MainMenuStrip = menuStrip1;
             Name = "MainMenu";
             Text = "Form1";

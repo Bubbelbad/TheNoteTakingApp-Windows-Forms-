@@ -47,9 +47,9 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(358, -1);
+            pictureBox1.Location = new Point(376, -66);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(298, 342);
+            pictureBox1.Size = new Size(358, 408);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -61,7 +61,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Name = "homePanel";
-            Size = new Size(656, 344);
+            Size = new Size(716, 410);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
