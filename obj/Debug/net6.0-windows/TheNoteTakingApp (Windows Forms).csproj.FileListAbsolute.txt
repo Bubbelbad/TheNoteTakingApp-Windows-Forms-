@@ -1,0 +1,25 @@
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\bin\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).exe
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\bin\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).deps.json
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\bin\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).runtimeconfig.json
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\bin\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).dll
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\bin\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).pdb
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp__Windows_Forms_.createPanel.resources
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp__Windows_Forms_.homePanel.resources
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp__Windows_Forms_.MainMenu.resources
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp__Windows_Forms_.Properties.Resources.resources
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp__Windows_Forms_.viewPanel.resources
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).csproj.GenerateResource.cache
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).AssemblyInfoInputs.cache
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).AssemblyInfo.cs
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).csproj.CoreCompileInputs.cache
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).dll
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\refint\TheNoteTakingApp (Windows Forms).dll
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).pdb
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).genruntimeconfig.cache
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\ref\TheNoteTakingApp (Windows Forms).dll
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp__Windows_Forms_.ExportForm.resources
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp__Windows_Forms_.ExportJsonForm.resources
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).csproj.AssemblyReference.cache
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\bin\Debug\net6.0-windows\MaterialSkin.dll
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).csproj.CopyComplete
