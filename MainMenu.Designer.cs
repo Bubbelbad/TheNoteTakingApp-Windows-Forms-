@@ -61,7 +61,7 @@
             // 
             // viewBtn
             // 
-            viewBtn.Location = new Point(10, 133);
+            viewBtn.Location = new Point(10, 142);
             viewBtn.Name = "viewBtn";
             viewBtn.Size = new Size(75, 23);
             viewBtn.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             // createBtn
             // 
-            createBtn.Location = new Point(10, 162);
+            createBtn.Location = new Point(10, 182);
             createBtn.Name = "createBtn";
             createBtn.Size = new Size(75, 23);
             createBtn.TabIndex = 3;

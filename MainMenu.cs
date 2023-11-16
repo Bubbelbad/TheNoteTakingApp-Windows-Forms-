@@ -13,17 +13,16 @@ namespace TheNoteTakingApp__Windows_Forms_
         {
             InitializeComponent();
 
-
+            //Adding MaterialSkinManager to easily change the theme
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Amber700, Primary.Amber900, Primary.Amber500, Accent.Amber400, TextShade.BLACK);
             this.Text = "The Note Taking App";
             this.Top = 0;
         }
 
-        MaterialSkinManager themeManager = MaterialSkinManager.Instance;
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
