@@ -8,7 +8,7 @@ It should be a very simple design that allows you to create messages and save au
 - There needs to be a list of objects that you can add to and remove from.
 - These objects should be saved as CSV, and then again uploaded and used in the program.
 
-## what I wanted to add:
+## what I wanted to further add:
 - Possibility to save the current file/collection of notes as CSV, Text and Json.
 - Adding a new color theme rather than having the default colors.
 - To use both panels and pop-up windows.
