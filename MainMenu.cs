@@ -119,6 +119,7 @@ namespace TheNoteTakingApp__Windows_Forms_
             exportJsonForm.ShowDialog();
         }
 
+
         private void newCollectionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
