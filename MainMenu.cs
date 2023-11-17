@@ -118,5 +118,21 @@ namespace TheNoteTakingApp__Windows_Forms_
             exportJsonForm.SetManager(noteManager1);
             exportJsonForm.ShowDialog();
         }
+
+        private void newCollectionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Title = "Name your File";
+            saveFileDialog1.InitialDirectory = @"C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\bin\Debug\net6.0-windows";
+            saveFileDialog1.Filter = "CSV Files (*.csv)|*.csv";
+            saveFileDialog1.ShowDialog();
+            if (saveFileDialog1.FileName != "")
+            {
+                File.Create(saveFileDialog1.FileName).Close();
+                noteManager1.ChangePath(saveFileDialog1.FileName);
+                noteManager1.Load();
+                viewBtn_Click(sender, e);
+            }
+        }
     }
 }
