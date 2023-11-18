@@ -25,7 +25,8 @@ namespace TheNoteTakingApp__Windows_Forms_
             this.Text = "About";
 
 
-            label1.Text = "This note taking app was \ncreated by Bubbelbad\n\n";
+            label1.Text = "This note taking app was \ncreated by Bubbelbad\n\n" +
+                          "You can find the project on:";
         }
     }
 }
