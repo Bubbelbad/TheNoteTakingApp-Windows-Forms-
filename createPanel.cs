@@ -34,6 +34,7 @@ namespace TheNoteTakingApp__Windows_Forms_
             this.ToolStripStatusLabel1 = toolStripStatusLabel1;
         }
 
+
         public void SetStatusLabel()
         {
             ToolStripStatusLabel1.Text = "create page";
@@ -73,7 +74,6 @@ namespace TheNoteTakingApp__Windows_Forms_
             messageTextBox.Clear();
             secretCheckBox.Checked = false;
         }
-
 
         public void EditNote(Note note)
         {

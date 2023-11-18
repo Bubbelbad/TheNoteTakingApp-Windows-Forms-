@@ -74,7 +74,8 @@ namespace TheNoteTakingApp__Windows_Forms_
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("A note taking app by Bubbelbad @ Github\n\n");
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.ShowDialog();
         }
 
 

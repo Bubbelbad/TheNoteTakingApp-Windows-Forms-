@@ -28,7 +28,7 @@ namespace TheNoteTakingApp__Windows_Forms_
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Amber700, Primary.Amber900, Primary.Amber500, Accent.Amber400, TextShade.BLACK);
-            this.Text = "The Note Taking App";
+            this.Text = "Export file to json";
             this.Top = 0;
         }
 

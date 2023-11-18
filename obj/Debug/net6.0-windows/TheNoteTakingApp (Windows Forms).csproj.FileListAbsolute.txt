@@ -23,3 +23,4 @@ C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-wi
 C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).csproj.AssemblyReference.cache
 C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\bin\Debug\net6.0-windows\MaterialSkin.dll
 C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp (Windows Forms).csproj.CopyComplete
+C:\Users\SOS23\source\repos\TheNoteTakingApp (Windows Forms)\obj\Debug\net6.0-windows\TheNoteTakingApp__Windows_Forms_.AboutForm.resources
