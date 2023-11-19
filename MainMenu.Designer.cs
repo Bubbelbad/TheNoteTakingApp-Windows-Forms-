@@ -52,9 +52,10 @@
             // 
             // homeBtn
             // 
-            homeBtn.Location = new Point(26, 105);
+            homeBtn.Location = new Point(30, 140);
+            homeBtn.Margin = new Padding(3, 4, 3, 4);
             homeBtn.Name = "homeBtn";
-            homeBtn.Size = new Size(75, 23);
+            homeBtn.Size = new Size(86, 31);
             homeBtn.TabIndex = 1;
             homeBtn.Text = "Home";
             homeBtn.UseVisualStyleBackColor = true;
@@ -62,9 +63,10 @@
             // 
             // viewBtn
             // 
-            viewBtn.Location = new Point(26, 194);
+            viewBtn.Location = new Point(30, 259);
+            viewBtn.Margin = new Padding(3, 4, 3, 4);
             viewBtn.Name = "viewBtn";
-            viewBtn.Size = new Size(75, 23);
+            viewBtn.Size = new Size(86, 31);
             viewBtn.TabIndex = 2;
             viewBtn.Text = "View";
             viewBtn.UseVisualStyleBackColor = true;
@@ -72,9 +74,10 @@
             // 
             // createBtn
             // 
-            createBtn.Location = new Point(26, 151);
+            createBtn.Location = new Point(30, 201);
+            createBtn.Margin = new Padding(3, 4, 3, 4);
             createBtn.Name = "createBtn";
-            createBtn.Size = new Size(75, 23);
+            createBtn.Size = new Size(86, 31);
             createBtn.TabIndex = 3;
             createBtn.Text = "Create";
             createBtn.UseVisualStyleBackColor = true;
@@ -88,9 +91,10 @@
             menuStrip1.GripMargin = new Padding(2);
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 64);
+            menuStrip1.Location = new Point(0, 63);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(89, 24);
+            menuStrip1.Padding = new Padding(7, 3, 0, 3);
+            menuStrip1.Size = new Size(110, 30);
             menuStrip1.TabIndex = 5;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -98,20 +102,20 @@
             // 
             fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newCollectionToolStripMenuItem, openToolStripMenuItem, exportToolStripMenuItem, exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Size = new Size(46, 24);
             fileToolStripMenuItem.Text = "&File";
             // 
             // newCollectionToolStripMenuItem
             // 
             newCollectionToolStripMenuItem.Name = "newCollectionToolStripMenuItem";
-            newCollectionToolStripMenuItem.Size = new Size(180, 22);
+            newCollectionToolStripMenuItem.Size = new Size(193, 26);
             newCollectionToolStripMenuItem.Text = "&New Collection";
             newCollectionToolStripMenuItem.Click += newCollectionToolStripMenuItem_Click;
             // 
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(180, 22);
+            openToolStripMenuItem.Size = new Size(193, 26);
             openToolStripMenuItem.Text = "&Open...(csv)";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
@@ -119,27 +123,27 @@
             // 
             exportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exportToTextToolStripMenuItem, toJsonToolStripMenuItem });
             exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            exportToolStripMenuItem.Size = new Size(180, 22);
+            exportToolStripMenuItem.Size = new Size(193, 26);
             exportToolStripMenuItem.Text = "&Export";
             // 
             // exportToTextToolStripMenuItem
             // 
             exportToTextToolStripMenuItem.Name = "exportToTextToolStripMenuItem";
-            exportToTextToolStripMenuItem.Size = new Size(203, 22);
+            exportToTextToolStripMenuItem.Size = new Size(254, 26);
             exportToTextToolStripMenuItem.Text = "Export collection to Text";
             exportToTextToolStripMenuItem.Click += exportToTextToolStripMenuItem_Click;
             // 
             // toJsonToolStripMenuItem
             // 
             toJsonToolStripMenuItem.Name = "toJsonToolStripMenuItem";
-            toJsonToolStripMenuItem.Size = new Size(203, 22);
+            toJsonToolStripMenuItem.Size = new Size(254, 26);
             toJsonToolStripMenuItem.Text = "Export collection to Json";
             toJsonToolStripMenuItem.Click += toJsonToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(193, 26);
             exitToolStripMenuItem.Text = "E&xit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -147,14 +151,14 @@
             // 
             helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem });
             helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            helpToolStripMenuItem.Size = new Size(44, 20);
+            helpToolStripMenuItem.Size = new Size(55, 24);
             helpToolStripMenuItem.Text = "&Help";
             helpToolStripMenuItem.TextDirection = ToolStripTextDirection.Horizontal;
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(107, 22);
+            aboutToolStripMenuItem.Size = new Size(133, 26);
             aboutToolStripMenuItem.Text = "&About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
@@ -162,56 +166,58 @@
             // 
             statusStrip1.ImageScalingSize = new Size(20, 20);
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
-            statusStrip1.Location = new Point(0, 509);
+            statusStrip1.Location = new Point(0, 569);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(914, 22);
+            statusStrip1.Padding = new Padding(1, 0, 16, 0);
+            statusStrip1.Size = new Size(1045, 26);
             statusStrip1.TabIndex = 7;
             statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(118, 17);
+            toolStripStatusLabel1.Size = new Size(151, 20);
             toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // createPanel1
             // 
-            createPanel1.Location = new Point(91, 64);
-            createPanel1.Margin = new Padding(3, 4, 3, 4);
+            createPanel1.Location = new Point(104, 116);
+            createPanel1.Margin = new Padding(3, 5, 3, 5);
             createPanel1.Name = "createPanel1";
-            createPanel1.Size = new Size(752, 422);
+            createPanel1.Size = new Size(859, 563);
             createPanel1.TabIndex = 8;
             // 
             // homePanel1
             // 
-            homePanel1.Location = new Point(91, 64);
-            homePanel1.Margin = new Padding(3, 4, 3, 4);
+            homePanel1.Location = new Point(104, 98);
+            homePanel1.Margin = new Padding(3, 5, 3, 5);
             homePanel1.Name = "homePanel1";
-            homePanel1.Size = new Size(712, 454);
+            homePanel1.Size = new Size(929, 605);
             homePanel1.TabIndex = 10;
             // 
             // viewPanel1
             // 
-            viewPanel1.Location = new Point(91, 64);
-            viewPanel1.Margin = new Padding(3, 4, 3, 4);
+            viewPanel1.Location = new Point(104, 85);
+            viewPanel1.Margin = new Padding(3, 5, 3, 5);
             viewPanel1.Name = "viewPanel1";
-            viewPanel1.Size = new Size(732, 422);
+            viewPanel1.Size = new Size(837, 563);
             viewPanel1.TabIndex = 11;
             // 
             // MainMenu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 531);
+            ClientSize = new Size(1045, 595);
             Controls.Add(statusStrip1);
             Controls.Add(createBtn);
             Controls.Add(viewBtn);
             Controls.Add(homeBtn);
             Controls.Add(menuStrip1);
+            Controls.Add(viewPanel1);
             Controls.Add(homePanel1);
             Controls.Add(createPanel1);
-            Controls.Add(viewPanel1);
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "MainMenu";
             Text = "Form1";
             Load += Form1_Load;
