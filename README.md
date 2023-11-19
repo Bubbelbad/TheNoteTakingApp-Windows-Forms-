@@ -10,11 +10,11 @@ All the notes are saved locally as CSV automaticly.
 - These objects should be saved as CSV, and then again uploaded and used in the program
 
 ## what I wanted to further add:
-- Possibility to save the current file/collection of notes as Text and Json
+- Possibilities to save the current file/collection of notes as both Text and Json
 - Being able to choose location where to save the .txt and .json files
-- Adding a new color theme rather than having the default colors
+- New color theme rather than having the default colors
 - To use both panels and pop-up windows
-- Using toolStripMenu and toolStripStatus just because it's nice
+- ToolStripMenu and toolStripStatus
 
 
 ![Preview](https://github.com/Bubbelbad/TheNoteTakingApp-WindowsForms/blob/master/Screenshot%20Viewpage.png?raw=true)
