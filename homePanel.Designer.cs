@@ -37,9 +37,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(33, 77);
+            label1.Location = new Point(20, 23);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(38, 15);
             label1.TabIndex = 0;
             label1.Text = "label1";
             // 
@@ -48,22 +48,20 @@
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.ErrorImage = (Image)resources.GetObject("pictureBox1.ErrorImage");
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(564, 113);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(363, 3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(453, 360);
+            pictureBox1.Size = new Size(396, 270);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
             // homePanel
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(pictureBox1);
             Controls.Add(label1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "homePanel";
-            Size = new Size(938, 543);
+            Size = new Size(762, 407);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
