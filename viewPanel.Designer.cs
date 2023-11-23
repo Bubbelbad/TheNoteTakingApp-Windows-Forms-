@@ -65,7 +65,7 @@
             // titleLabel2
             // 
             titleLabel2.AutoSize = true;
-            titleLabel2.Location = new Point(22, 44);
+            titleLabel2.Location = new Point(23, 56);
             titleLabel2.Name = "titleLabel2";
             titleLabel2.Size = new Size(35, 15);
             titleLabel2.TabIndex = 2;
@@ -74,7 +74,7 @@
             // authorLabel2
             // 
             authorLabel2.AutoSize = true;
-            authorLabel2.Location = new Point(22, 23);
+            authorLabel2.Location = new Point(23, 25);
             authorLabel2.Name = "authorLabel2";
             authorLabel2.Size = new Size(47, 15);
             authorLabel2.TabIndex = 3;
@@ -83,7 +83,7 @@
             // title2
             // 
             title2.AutoSize = true;
-            title2.Location = new Point(85, 44);
+            title2.Location = new Point(64, 56);
             title2.Name = "title2";
             title2.Size = new Size(0, 15);
             title2.TabIndex = 4;
@@ -91,7 +91,7 @@
             // author2
             // 
             author2.AutoSize = true;
-            author2.Location = new Point(85, 23);
+            author2.Location = new Point(76, 26);
             author2.Name = "author2";
             author2.Size = new Size(0, 15);
             author2.TabIndex = 5;
@@ -99,7 +99,7 @@
             // categoryLabel2
             // 
             categoryLabel2.AutoSize = true;
-            categoryLabel2.Location = new Point(22, 64);
+            categoryLabel2.Location = new Point(22, 87);
             categoryLabel2.Name = "categoryLabel2";
             categoryLabel2.Size = new Size(61, 15);
             categoryLabel2.TabIndex = 6;
@@ -108,7 +108,7 @@
             // category2
             // 
             category2.AutoSize = true;
-            category2.Location = new Point(85, 64);
+            category2.Location = new Point(89, 87);
             category2.Name = "category2";
             category2.Size = new Size(0, 15);
             category2.TabIndex = 7;
