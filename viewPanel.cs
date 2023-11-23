@@ -39,7 +39,7 @@ namespace TheNoteTakingApp__Windows_Forms_
             this.CreatePanel = createPanel;
         }
 
-        
+
         public void SetStatusLabel()
         {
             ToolStripStatusLabel1.Text = "view page";

@@ -83,7 +83,7 @@
             // title2
             // 
             title2.AutoSize = true;
-            title2.Location = new Point(64, 56);
+            title2.Location = new Point(89, 56);
             title2.Name = "title2";
             title2.Size = new Size(0, 15);
             title2.TabIndex = 4;
@@ -91,7 +91,7 @@
             // author2
             // 
             author2.AutoSize = true;
-            author2.Location = new Point(76, 26);
+            author2.Location = new Point(89, 26);
             author2.Name = "author2";
             author2.Size = new Size(0, 15);
             author2.TabIndex = 5;
